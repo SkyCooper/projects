@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kabul Formu</title>
+    <style>
+
+        div fieldset label {
+            display: inline-block;
+            width: 200px;
+        }
+
+        #yorum {
+            resize: none;
+            width: 700px;
+            height: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Intersecting Codes Grubu Katılım ve Onay Sözleşmesi</h1>
+    
+    <div>
+        <fieldset>
+            <legend><b>Sözleşme Onay</b></legend>
+            <label style="width: 70%;" for="kutu"><i>İntersecting Codes grubu yönetmeliğini okudum, aşağıdaki bilgilerin doğruluğunu kabul ediyorum ve sözleşmeyi onaylıyorum.</i></label>
+            <input type="checkbox" name="" id="kutu" required checked>
+            <br> <br>
+            <input type="submit" value="Formu Kaydet">
+            <input type="reset" value="Formu Temizle">
+            <input type="button" value="Grup Yönetmeliğini Oku">
+        </fieldset>
+    </div>
+    
+    <div>
+        <fieldset>
+            <legend><b>Kişisel Bilgiler</b> </legend>
+            <label for="no1">Kursiyer Numarası</label>
+            <input type="text" name="formGuvenlik" id="no1" required placeholder="F1234-Name">
+            <br>
+            <label for="ad">Ad</label>
+            <input type="text" id="ad" name="ad">
+            <br>
+            <label for="soyad">Soyad</label>
+            <input type="text" id="soyad" name="soyad">
+            <br>
+            <label for="yas">Yas</label>
+            <input type="number" name="yas" id="yas" min="18" max="41">
+            <br>
+            <label for="mail">Mail Adresi</label>
+            <input type="email" name="mail" id="mail" >
+            <br>
+            <label for="tel">Telefon Numarası</label>
+            <input type="tel" name="telNo" id="tel" pattern="[0-9]{4} [0-9]{3} [0-9]{2} [0-9]{2}"
+            placeholder="05xx xxx xx xx" >
+            <br>
+            <label for="foto">Profil Fotoğrafı</label>
+            <input type="file" name="foto" id="foto">
+        </fieldset>
+    </div>
+    
+    <div>
+        <fieldset>
+            <legend><b>Kurs Bilgileri</b></legend>
+            <label for="bas">Kurs Başlangıç Tarihi</label>
+            <input type="date" name="kursBaslangıc" id="bas">
+            <br>
+            <label for="bit">Kurs Bitiş Tarihi</label>
+            <input type="date" name="kursBitis" id="bit">
+            <br>
+            <p>Günlük Çalışma Saati Seçiniz:</p>
+            <input type="radio" name="saat" id="saat1">
+            <label for="saat1">1-4 Saat</label>
+            <input type="radio" name="saat" id="saat2">
+            <label for="saat2">5-7 Saat</label>
+            <input type="radio" name="saat" id="saat3">
+            <label for="saat3">8 Saat ve üzeri </label>
+            <!-- <input type="radio" name="saat" id="saat4">
+            <label for="saat4">7-8 Saat</label> -->
+            <br> <br>
+            <label for="sec">Hangi Path Seçmeyi Düşünüyorsunuz?</label>
+            <select name="path" id="path" size="5">
+                <option value="Full Stack">Full Stack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="AWS & Devops">AWS & Devops</option>
+                <option value="Cyber Security">Cyber Security</option>
+                <option value="Salesforce">Salesforce</option>
+            </select>
+
+
+        </fieldset>
+    </div>
+    
+    <div>
+        <fieldset>
+            <legend><b>Sözleşme</b></legend>
+            <label style="width: 70%;" for="yorum"></label>
+            <textarea name="yorum" id="yorum" placeholder="Bu sözleşmenin amacı Intersecting Codes grubunda bulunan kursiyerlerin kurs süresince uyum içinde ve keyifle çalışmalarını sağlamak, grupça çıkılan yolda başarıya hep birlikte ulaşmak için ortak bir amaca hizmet etmeyi ilke haline getirmeyi sağlamaktır. Grubun ortak amacı 'hep birlikte başarıya ulaşmaktır.'' Söz konusu amaca ulaşmak adına icra edilen toplantı, fikir alışverişi vb. faaliyetlere azami ölçüde katılmaya çalışılmalıdır. "></textarea>
+        </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+            <legend><b>İletişim Kanalları</b></legend>
+            <input type="radio" name="discord" id="knl2">
+            <label for="knl2">Discord Grubuna Katılmak İstemiyorum</label>
+            <input type="radio" name="discord" id="knl1">
+            <label for="knl1">Discord Grubuna Katılmak <b>İstiyorum</b></label>
+            <input type="button" value="Discord Grubuna Katıl">
+            <br> <br>
+            <input type="radio" name="whatsapp" id="knl4">
+            <label for="knl4">Whatsapp Grubuna Katılmak İstemiyorum</label>
+            <input type="radio" name="whatsapp" id="knl3">
+            <label for="knl3">Whatsapp Grubuna Katılmak <b>İstiyorum</b></label>
+            <input type="button" value="Whatsapp Grubuna Katıl">
+            <br> <br>
+            <input type="radio" name="Slack" id="knl6">
+            <label for="knl6">Slack Grubuna Katılmak İstemiyorum</label>
+            <input type="radio" name="Slack" id="knl5">
+            <label for="knl5">Slack Grubuna Katılmak <b>İstiyorum</b></label>
+            <input type="button" value="Slack Grubuna Katıl">
+
+        </fieldset>
+    </div>
+    
+    <!-- <div>
+        <fieldset>
+            <legend> </legend>
+            <label for=""></label>
+            <input type="text">
+        </fieldset>
+    </div> -->
+    
+</body>
+</html>
