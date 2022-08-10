@@ -1,0 +1,23 @@
+body {
+  /* background-image: url(./images.png);
+  -webkit-background-size:cover ;
+  background-size: cover; */
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  background-color: gainsboro;
+}
+
+header h1 {
+  font-size: 4rem;
+  text-shadow: ;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  border: 5px solid black;
+  padding: 30px;
+  background-color: antiquewhite;
+}

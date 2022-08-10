@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survay Form</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Clarusway Survey Form</h1>
+            <p><u>Thank you for taking the time to help us improve the platform</u></p>
+        </header>
+
+        <form action="#" method="get">
+            <div class="name">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                <br>
+            </div>
+            <br>
+            <!-- label input iç içe kullanımı -->
+            <div class="surname">
+                <label for="surname">Surname <br> <input type="text" name="surname" id="surname"
+                        placeholder="Enter your surname" required></label>
+                <br>
+            </div>
+            <br>
+            <div class="email">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="user@clarusway.com" required>
+                <br>
+            </div>
+            <br>
+            <div class="describe">
+                <label for="select">Which option best describes your current role?</label>
+                <br>
+                <select name="option" id="select" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="Student">Student</option>
+                    <option value="Teacher">Teacher</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Part time Job">Part time Job</option>
+                    <option value="Full Time Learner">Full Time Learner</option>
+                    <option value="Prefer Not to Say">Prefer Not to Say</option>
+                </select>
+            </div>
+            <br>
+            <div class="recomend">
+                <p>Would you recommend Clarusway to a friend?</p>
+                <br>
+                <input type="radio" name="recomend" id="yes">
+                <label for="yes">Definetly, Yes</label>
+                <br>
+                <input type="radio" name="recomend" id="maybe">
+                <label for="maybe">Maybe</label>
+                <br>
+                <input type="radio" name="recomend" id="notsure">
+                <label for="notsure">Not sure</label>
+                <br>
+                <input type="radio" name="recomend" id="no">
+                <label for="no">Definetly, No</label>
+            </div>
+            <br>
+
+            <div class="favorite">
+                <label for="favori">What is your favorite feature of Clarusway?</label>
+                <br>
+                <select name="option" id="favori" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="Courses">Courses</option>
+                    <option value="Projects">Projects</option>
+                    <option value="Community">Community</option>
+                    <option value="Mentors">Mentors</option>
+                </select>
+            </div>
+
+            <div class="improve">
+                <p>What would you like to see improved? (Check all that apply)</p>
+                <input type="checkbox" name="Front-end" id="ders1">
+                <label for="ders1">Front-end Projects</label>
+                <br>
+                <input type="checkbox" name="Back-end" id="ders2">
+                <label for="ders2">Back-end Projects</label>
+                <br>
+                <input type="checkbox" name="Data" id="ders3">
+                <label for="ders3">Data Science</label>
+                <br>
+                <!-- label ve input iç içe yazılması -->
+                <label for="ders4"> <input type="checkbox" name="Additional" id="ders4"> Additional Courses </label>
+                <br>
+            </div>
+            <br>
+            <div class="comment">
+                <label for="comment">Any comments or suggestions?</label>
+                <br>
+                <textarea name="girilenYorum" id="comment"
+                    placeholder="Enter your comment here... Thanks for your comments..."></textarea> <br>
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Clear">
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
