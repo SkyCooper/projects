@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #121212;
+}
 
 .container{
     max-width: 1400px;
@@ -10,13 +13,17 @@
     background-color: #121212;
   
   }
-
+header{
+    width: 100%;
+    background-color:#FFCB04;
+}
 
 .giris{
     background-color:#FFCB04;
     height: 100px;
     width: 1400px;
     display: flex;
+    margin: auto;
 }
 
 .logo{
@@ -174,19 +181,22 @@
 
 .play, .app, .gallery{
     background-color: #121212;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     color: white;
     border-radius: 10px;
     margin:20px auto;
+    cursor: pointer;
 }
 
 .sosyal{
-   width: 350px;
-   margin: auto;
+    width: 350px;
+    margin: auto;
+    cursor: pointer;
 }
 .sosyal i {
     font-size: 45px;
     margin: 40px 0;
+    cursor: pointer;
 }
 
 .yardim input{
