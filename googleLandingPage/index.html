@@ -6,39 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/gfavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Google Clone</title>
 </head>
 <body>
     <div class="container">
-
         <header>
-            <div>
-                <a href="#">Gmail</a>
-                <a href="#">Görseller</a>
-                <a href="#"><img src="./images/icon-menu.jpg" alt=""></a>
+            <div class="left">
+                <a href="#" id="l1">About</a>
+                <a href="#" id="l2">Store</a>
+
+            </div>
+            <div class="right">
+                <a href="#" id="r1">Gmail</a>
+                <a href="#" id="r2">Görseller</a>
+                <a href="#"><img src="./images/icon-menu.jpg" alt="" width="30px" id="r3"></a>
                 <input type="submit" value="Sign In">
 
             </div>
         </header>
 
         <main>
-            <section>
-                <img src="./images/googlelogo.png" alt="logo">
+            <section class="logo">
+                <img src="./images/googlelogo.png" alt="logo" width="300px">
             </section>
 
-            <section>
+            <section class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <img src="./images/magnifying_glass.jpg" alt="glass" width="40px">
                 <input type="search" name="Search" id="">
-                <img src="./images/google_microphone.png" alt="mic">
-                <img src="./images/magnifying_glass.jpg" alt="glass">
+                <img src="./images/google_microphone.png" alt="mic" width="20px">
+                <i class="fa-solid fa-microphone"></i>
+            </section>
+
+            <section class="button">
+                <input id="btn1" type="submit" value="Google Search">
+                <input id="btn2" type="submit" value="I'm Feeling Lucky">
             </section>
 
             <section>
-                <input type="submit" value="Google Search">
-                <input type="submit" value="I'm Feeling Lucky">
-            </section>
-
-            <section>
-                <p>Other Languages you can use Google <a href="#">English</a></p>
+                <p id="other">Other Languages you can use Google <a href="#">English</a></p>
             </section>
         </main>
         
