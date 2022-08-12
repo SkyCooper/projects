@@ -27,7 +27,6 @@ header{
 }
 .right{
     position: relative;
-    /* border: 2px solid greenyellow; */
     margin-left: 80%;
 }
 
@@ -53,26 +52,39 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 .search{
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .search input{
     width: 584px;
     height: 44px;
     border-radius: 30px;
+    font-size: 35px;
 }
 
+
 .button{
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
+}
+
+#mic{
+    position: relative;
+    display: inline;
+    right: 40px;
+}
+#glass{
+    position: relative;
+    display: inline;
+    left: 50px;
 }
 
 #btn1{
@@ -96,7 +108,6 @@ main{
 }
 
 #other{
-    /* border: 1px solid red; */
     text-align: center;
     margin-top: 30px;
     font-size: 17px;
