@@ -112,11 +112,8 @@ header{
 
 
 /* main bölümü section 2 */
-.arkaplan{
-    /* background-color: #121212; */
-}
+
 .reklam{
-    /* margin-top: 50px; */
     background-color: #121212;
 }
 
@@ -168,10 +165,7 @@ header{
     width: 300px;
     height: 80px;
     background-color: #121212;
-    /* border: 2px solid white; */
     color: white;
-    /* border-radius: 10px; */
-    /* margin: 5px; */
     font-size: 45px;
 }
 .store i{
@@ -181,7 +175,6 @@ header{
 
 .play, .app, .gallery{
     background-color: #121212;
-    /* border: 2px solid white; */
     color: white;
     border-radius: 10px;
     margin:20px auto;
