@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -13,42 +14,130 @@ body{
 
 }
 
+.cover{
+    width: 50%;
+    padding-left: 300px;
+
+}
+#kapak{
+    align-items: center;
+}
+
 header{
-outline: 2px solid red;
+/* outline: 2px solid red; */
 max-width: 100%;
 height: auto;
 margin: 10px 0px;
 padding: 30px 0px;
 }
+
 #spacelogo{
     width: 150px;
     vertical-align: middle;
+    margin-left: 300px;
 }
 
 main{
-    border: 3px solid salmon;
+    /* border: 3px solid salmon; */
     display: flex;
+    padding-bottom: 30px;
 }
 
-section{
-    border: 1px solid yellow;
-    width: 95%;
-}
 
 .text{
     width: 50%;
     padding: 10px 200px 10px 10px;
+    text-align: right;
 
 }
 
-.cover{
+.text h1{
+    font-size: 38px;
+}
+
+.text p {
+    padding: 40px 0;
+    font-size: 18px;
+}
+
+.button a input{
+    background-color: rgba(255, 222, 173, 0);
+    color: white;
+    padding: 15px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    margin-left: 35px;
+}
+.button a input:hover{
+    background-color: rgba(206, 197, 187, 0.755);
+    color:black;
+    cursor: pointer;
+  box-shadow: -14px 4px 84px 11px rgba(217,192,28,0.63);
+}
+
+.text p{
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.eposta{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    /* border: 1px solid red; */
+}
+
+#mail, #abone{
     width: 50%;
-    /* vertical-align: middle; */
-    align-items: center;
-    padding-left: 300px;
+    padding: 15px;
+    border-radius: 30px;
+    margin: 10px 0 10px 350px;
+    font-size: 18px;
+}
+
+#abone {
+   background-color: rgba(255, 222, 173, 0);
+    color: white;
+     border: 2px solid white;
+}
+
+#abone:hover{
+    background-color: rgba(206, 197, 187, 0.755);
+    color:black;
+    cursor: pointer;
+  box-shadow: -14px 4px 84px 11px rgba(217,192,28,0.63);
 
 }
-#kapak{
-    /* vertical-align: middle; */
+
+.links{
+    margin-left: 50px;
+}
+.links a{
+    text-decoration: none;
+}
+.links a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer{
+    /* border: 1px solid yellow; */
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: auto;
     align-items: center;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+.footer p {
+    padding: 50px 40px;
+    line-height: 25px;
+    font-size: 10px;
+    text-align: center;
+}
+
+#dblogo{
+    margin-left: 350px;
 }

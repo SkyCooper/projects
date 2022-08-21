@@ -13,11 +13,11 @@
 <body>
     <div class="container">
         <header class="logo">
-            <img src="./image/logo-light@2x.png" alt="logo" id="spacelogo" />
+            <a href="https://www.allaboutspace.com.tr/"><img src="./image/logo-light@2x.png" alt="logo" id="spacelogo" /></a>
         </header>
         <main>
             <section class="cover">
-                <img src="./image/kapak.jpg" alt="kapak" />
+                <img src="./image/kapak.jpg" alt="kapak" id="kapak" />
             </section>
 
             <section class="text">
@@ -25,38 +25,44 @@
                 <p>
                     All About Space’in yeni sayısı tüm Türkiye’de bayilerde. Kaçırmayın!
                 </p>
-                <div class="buton">
+                <div class="button">
                     <a href="#"><input type="button" value="ABONE OL" /></a>
                     <a href="#"><input type="button" value="BURADAN SATIN AL" /></a>
                 </div>
                 <p>
-                    Yeni sayılardan haberdar olun! All About Space dergisi ve bilim özel
+                    Yeni sayılardan haberdar olun! <br>
+                    All About Space dergisi ve bilim özel
                     sayılarımızla ilgili yenilikleri size e-postayla ulaştırmamızı ister
                     misiniz? Bültenimize abone olun.
                 </p>
-                <input type="email" name="email" id="mail" placeholder="E-posta adresiniz">
-                <input type="button" value="Abone Ol"> <br>
-                <div class="links">
 
-                    <a href="#">Aydınlatma Metni</a> <br>
-                    <a href="#">Çerez Politikası</a> <br>
+                <section class="eposta">
+                    <input type="email" name="email" id="mail" placeholder="E-posta adresiniz">
+                    <input type="button" value="Abone Ol" id="abone"> <br>
+                    <div class="links">
+                </section>
+                <br> <br>
+                <section class="links">
+                    <a href="#">Aydınlatma Metni</a> <br> <br>
+                    <a href="#">Çerez Politikası</a> <br> <br>
                     <a href="#">E-bülten sürecinde işlenen kişisel verilerinize ilişkin aydınlatma metnine buradan
                         ulaşabilirsiniz.</a>
-                </div>
+                </section>
+
 
             </section>
 
 
         </main>
-        <footer>
-            <a href="#"><img src="./image/db-logo.png" alt="dblogo"></a>
-            <p>© 2019, Doğan Burda Dergi Yayıncılık ve Pazarlama A.Ş.
+        <footer class="footer">
+            <a href="#"><img src="./image/db-logo.png" alt="dblogo" id="dblogo" width="60px"></a>
+            <p>© 2019, Doğan Burda Dergi Yayıncılık ve Pazarlama A.Ş. <br>
 
                 All About Space adlı yayının telif hakkı ve lisansı, Birleşik Krallık merkezli Future plc grup şirketi
                 Future Publishing Limited’a aittir. Tüm hakları saklıdır. Future plc grubu tarafından yayımlanan
-                dergiler hakkında bilgi almak için www.futureplc.com adresini ziyaret edebilirsiniz. All About Space™
+                dergiler hakkında bilgi almak için <br>  www.futureplc.com adresini ziyaret edebilirsiniz. All About Space™
                 markası Future Publishing Limited lisansıyla kullanılmaktadır.</p>
-            <img src="./image/future-logo.png" alt="future">
+            <img src="./image/future-logo.png" alt="future" id="future" width="120px" height="60px">
         </footer>
     </div>
 </body>
