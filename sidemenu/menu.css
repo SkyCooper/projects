@@ -26,9 +26,8 @@
   padding: 3px;
   text-align: center;
   color: white;
-
-
 }
+
 .second{
   background-color:#bf9000;
   height: 220px;
@@ -49,12 +48,10 @@ i{
   left: 0;
 }
 
-
 .main:hover i {
 transform: rotate(-180deg);
 color: white;
 }
-
 
 h1{
   margin-top: -5px;
