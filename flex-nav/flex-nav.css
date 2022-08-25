@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 25px 20px;
-  margin-top: 50px;
+  margin-top: 100px;
   background: linear-gradient(
     120deg,
     rgba(51, 55, 55, 1) 39%,
@@ -35,20 +35,24 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 25%;
+  padding: 1.4rem;
   border: 2px solid var(--gri-5);
   border-radius: 30px;
   background-color: var(--mavi5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .menu a {
   padding: 10px 10px;
-  transition: all 1s;
+  transition: all 1.5s;
 }
 .menu a:hover {
   background-color: var(--mavi1);
   color: var(--mavi-11);
   border-radius: 10px;
-  margin: 10px;
+  margin: 1px;
 }
 
 .icon {
