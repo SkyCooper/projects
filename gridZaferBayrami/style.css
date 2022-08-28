@@ -1,10 +1,136 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: aqua;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: circle;
+  background-color: rgb(136, 55, 55);
 }
 
-.container{
-    display: grid;
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 17vw);
+  grid-template-rows: repeat(5, 18vh);
+  grid-template-areas:
+    "a a a a a"
+    "b c c c d"
+    "b c c c h"
+    "e c c c g"
+    "e f f f f";
+
+  margin: 20px 80px;
+  gap: 30px;
+}
+
+.content {
+  /* background-color: antiquewhite; */
+  border: 1px solid white;
+  outline: 2px solid white;
+  outline-offset: 5px;
+}
+
+header {
+  grid-area: a;
+  background-image: url(./images/banner.jpg);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+header a {
+  padding: 10px 30px;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid wheat;
+  border-radius: 30px;
+  background-color: rgba(250, 235, 215, 0.162);
+}
+
+header a:hover {
+    background-color: red;
+}
+
+.content img,
+iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  grid-area: b;
+  background-image: url(./images/at.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.map {
+  grid-area: e;
+}
+
+.video {
+  grid-area: c;
+}
+
+.box1 {
+  grid-area: d;
+  background-image: url(./images/kroki.jpg);
+  background-size: cover;
+}
+
+.box2 {
+  grid-area: h;
+  overflow: auto;
+  background-color: aliceblue;
+  border: 1px solid black;
+  padding: 3px 5px;
+  text-align: justify;
+}
+
+aside ul li,
+h1 {
+  background-color: aliceblue;
+  list-style-type: decimal;
+}
+
+aside h1 {
+  font-size: 14px;
+  padding: 5px 2px;
+  font-weight: 800;
+}
+
+.box3 {
+  grid-area: g;
+  background-image: url(./images/wood-fibre-boards-3114799_960_720.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+  grid-area: f;
+  background-image: url(./images/footer.jpg);
+  background-size: cover;
+
+
+  display: flex;
+    align-items: flex-end;
+  justify-content: center;
+}
+
+footer a {
+  padding: 10px 30px;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid wheat;
+  border-radius: 30px;
+  background-color: rgba(250, 235, 215, 0.162);
+}
+
+footer a:hover {
+    background-color: red;
 }
