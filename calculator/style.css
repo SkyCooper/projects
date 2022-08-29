@@ -1,16 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 1.3rem;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
-    display: grid;
-    grid-template-rows: repeat(7, 60px);
-    grid-template-columns: repeat(4, 60px);
-    grid-template-areas: 
+.container {
+  display: grid;
+  grid-template-rows: repeat(7, 80px);
+  grid-template-columns: repeat(4, 80px);
+  grid-template-areas:
     "a a a a"
     "a a a a"
     "b c d e"
@@ -19,121 +19,106 @@
     "n o p q"
     "r r s t";
 
-    background-color: black;
-    border: 1px solid black;
-    gap: 5px;
-    padding: 10px;
-    width: 280px;
-    border-radius: 30px;
-    margin: 200px auto;
+  background-color: black;
+  border: 1px solid black;
+  gap: 8px;
+  padding: 20px;
+  width: 380px;
+  border-radius: 30px;
+  margin: 100px auto;
 }
 
-.button{
-border: 1px solid black;
-border-radius: 50%;
-text-align: center;
-line-height: 60px;
+.button {
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80px;
 }
 
-.button:hover{
-opacity: 0.5;
+.button:hover {
+  opacity: 0.5;
 }
-.button:active{
-transform: scale(95%);
-}
-
-.dark{
-    background-color: #383838;
-    color: white;
-
+.button:active {
+  transform: scale(95%);
 }
 
-.light{
-    background-color: #A2A2A2 ;
+.dark {
+  background-color: #383838;
+  color: white;
 }
 
-.orange{
-    background-color: #F1A33C;
-    color: white;
+.light {
+  background-color: #a2a2a2;
 }
 
-.top{
-    grid-area: a;
+.orange {
+  background-color: #f1a33c;
+  color: white;
 }
 
-.btn1{
-    
-}
-
-.btn2{
+.top {
+  grid-area: a;
+  background-color: #a2a2a2;
+  border-radius: 30px;
+  margin-bottom: 8px;
 
 }
 
-.btn3{
-
+.btn1 {
 }
 
-.btn4{
-
+.btn2 {
 }
 
-.btn5{
-
+.btn3 {
 }
 
-.btn6{
-
+.btn4 {
 }
 
-.btn7{
-
+.btn5 {
 }
 
-.btn8{
-
+.btn6 {
 }
 
-.btn9{
-
+.btn7 {
 }
 
-.btn10{
-
+.btn8 {
 }
 
-.btn11{
-
+.btn9 {
 }
 
-.btn12{
-
+.btn10 {
 }
 
-.btn13{
-
+.btn11 {
 }
 
-.btn14{
-
+.btn12 {
 }
 
-.btn15{
-
+.btn13 {
 }
 
-.btn16{
-
+.btn14 {
 }
 
-.btn17{
-grid-area: r;
-border-radius: 150px;
+.btn15 {
 }
 
-.btn18{
-
+.btn16 {
 }
 
-.btn19{
+.btn17 {
+  grid-area: r;
+  border-radius: 150px;
+}
 
+.btn18 {
+}
+
+.btn19 {
 }
