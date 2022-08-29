@@ -58,7 +58,7 @@
 
 .top {
   grid-area: a;
-  background-color: #a2a2a2;
+  background-color: rgb(32, 31, 31);
   border-radius: 30px;
   margin-bottom: 8px;
 }
