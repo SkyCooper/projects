@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+body {
+  background-image: url(./images/body-.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: repeat(6, 250px);
+  grid-template-rows: repeat(8, 250px);
+  grid-template-areas:
+    "h h h h h h"
+    "n n n n n n"
+    "al t t t t ar"
+    "al m m m m ar"
+    "al m m m m ar"
+    "al m m m m ar"
+    "al b b b b ar"
+    "sl f f f f sr";
+  gap: 15px;
+  margin: 30px auto;
+}
+
+.a {
+  border: 2px solid red;
+}
+.header {
+  grid-area: h;
+  background-image: url(./images/he.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 150px;
+  display: flex;
+  cursor: pointer;
+}
+
+/* .header ul li {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    padding: 50px;
+    width: 300px;
+    margin-left: 50px;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+} */
+
+.navbar {
+  grid-area: n;
+  position: sticky;
+  top: 15px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 150px;
+  background-image: url(./images/eye.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.content{
+    width: 10%;
+    color: antiquewhite;
+    text-align: center;
+}
+
+label {
+    font-size: 1.6rem;
+}
+
+.content select{
+    width: 100%;
+    padding: 30px;
+    border-radius: 150px;
+    background-color: aqua;
+    color: w;
+}
+
+.aside {
+}
+
+.lefta {
+  grid-area: al;
+  background-image: url(./images/lefta.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 150px;
+}
+
+.righta {
+  grid-area: ar;
+  background-image: url(./images/righta.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 150px;
+}
+
+.top {
+  grid-area: t;
+  border-radius: 150px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: m;
+  background-attachment: fixed;
+  background-image: url(./images/throne.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 150px;
+
+}
+
+.bottom {
+  grid-area: b;
+  border-radius: 150px;
+
+}
+
+.section {
+}
+
+.lefts {
+  grid-area: sl;
+  background-image: url(./images/ls.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.rigths {
+  grid-area: sr;
+  background-image: url(./images/rs.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.footer {
+  grid-area: f;
+  border-radius: 150px;
+
+}

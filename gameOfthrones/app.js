@@ -1,0 +1,1 @@
+alert("Yeni bölümler ve güncel haberler için site bildirimlerine izin veriniz.")
