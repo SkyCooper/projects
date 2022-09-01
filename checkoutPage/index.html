@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Checkout</title>
+</head>
+
+<body>
+  <header>,
+    <h1>Checkout</h1>
+  </header>
+  <div class="container">
+    <!--! Form ile resim olarak iki ana div açtım ikisini yan yana getireceğiz. Form tekbir alt form divinden oluşuyor-->
+    <div class="form">
+      <h3>Concact information</h3>
+      <label for="ma">Email</label><br />
+      <input type="email" name="email" id="ma" placeholder= "Enter your Email" required/>
+      <i class="fa-solid fa-envelope"></i>
+      <br />
+      <label for="tel">Phone</label><br />
+      <input type="tel" name="phone" id="tel" placeholder="Enter your number" required/>
+      <i class="fa-solid fa-phone"></i>
+      <br /><br /><br />
+      <h2>Shipping adress</h2>
+      <label for="na">Full Name</label><br />
+      <input type="text" name="name" id="na" placeholder="Enter your name" required/>
+      <i class="fa-solid fa-user"></i> 
+      <br />
+      <label for="ad">Adress</label><br />
+      <input type="text" name="adress" id="ad" placeholder="Enter your adress" required/>
+    <i class="fa-solid fa-house"></i>
+      <br />
+      <label for="cty">City</label><br />
+      <input type="text" name="city" id="cty" placeholder="Enter your city" required/>
+      <i class="fa-solid fa-city"></i>
+      <br />
+
+      <label for="">Country</label>
+      <!--!&emps boşluk bırakmak için-->
+      <br />
+      
+      <select>
+        <option>Html</option>
+        <option>Css</option>
+        <option>JavaScript</option>
+      </select>
+      <i class="fa-solid fa-earth-europe"></i>
+      <label for="">Post Code</label>
+      <br>
+      <input type="text" name="code" id="cod" placeholder="Enter your postal code" required/>
+      <i class="fa-solid fa-envelopes-bulk"></i>
+      <br />
+      <input type="checkbox" name="box" id="box1" />
+      <label for="box1">See this information next time</label><br />
+      <button type="submit">Continue</button>
+    </div>
+    <div class="resim">
+      <!--!ürün resimlerinin ve fiyatlarının bulunduğu div-->
+      <div class="canta">
+        <!--!resim ile fiyatın olduğu bölümü kapsayan div-->
+        <img src="./25709027-a238-4c32-9e24-380747f64e09.jpg" alt="canta" class="urunresim" />
+        <div class="box">
+          <!--!resim yanındaki yazıların tamamını kapsayan div-->
+          <h3>Vintage Backbag</h3>
+          <p>$54.99 <span class="eski">$94.99</span></p>
+          <!--! artır azalt butonunun bulunduğu bölüm alttaki 3 satır-->
+          <button type="button" onclick="azalt()">-</button>
+          <input type="text" value="0" size="5" id="sayi" name="sayi" />
+          <button type="button" onclick="artir()">+</button>
+        </div>
+      </div>
+      <div class="ayakkabi">
+        <!--!resim ile fiyatın olduğu bölümü kapsayan div-->
+        <img src="./ayakkabı.png" alt="ayakkabi" class="urunresim" />
+        <div class="box1">
+          <!--!resim yanındaki yazıların tamamını kapsayan div-->
+          <h3>Levi Shoes</h3>
+          <p>$74.99 <span class="eski">$124.99</span></p>
+          <button type="button" onclick="azalt1()">-</button>
+          <input type="text" value="0" size="5" id="sayi1" name="sayi" />
+          <button type="button" onclick="artir1()">+</button>
+        </div>
+      </div>
+      <p class="text1">Shipping <span class="fiyat1">$19</span></p>
+      <p class="text1">Total <span class="fiyat1">$148.98</span></p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var s = 0;
+
+    function artir() {
+      deger = document.getElementById("sayi");
+      s++;
+      deger.value = s;
+    }
+
+    function azalt() {
+      deger = document.getElementById("sayi");
+      s--;
+      deger.value = s;
+    }
+    function artir1() {
+      deger = document.getElementById("sayi1");
+      deger.value = s;
+      s++;
+    }
+
+    function azalt1() {
+      deger = document.getElementById("sayi1");
+      deger.value = s;
+      s--;
+    }
+  </script>
+</body>
+
+</html>
