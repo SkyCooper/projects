@@ -9,87 +9,180 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Checkout</title>
+  <link rel="shortcut icon" href="./images/user-solid.svg" type="image/x-icon">
+  <title>Checkout Cooper</title>
 </head>
 
 <body>
-  <header>,
+  <header>
     <h1>Checkout</h1>
   </header>
   <div class="container">
     <!--! Form ile resim olarak iki ana div açtım ikisini yan yana getireceğiz. Form tekbir alt form divinden oluşuyor-->
-    <div class="form">
+    <form action="result.html" method="get" class="form">
+
       <h3>Concact information</h3>
+      <br>
+
       <label for="ma">Email</label><br />
-      <input type="email" name="email" id="ma" placeholder= "Enter your Email" required/>
-      <i class="fa-solid fa-envelope"></i>
+      <div class="inputbox">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" name="email" id="ma" class="mail" placeholder="Enter your Email" required />
+      </div>
       <br />
+
       <label for="tel">Phone</label><br />
-      <input type="tel" name="phone" id="tel" placeholder="Enter your number" required/>
-      <i class="fa-solid fa-phone"></i>
+      <div class="inputbox">
+        <i class="fa-solid fa-phone"></i>
+        <input type="tel" name="phone" id="tel" placeholder="Enter your number" required />
+      </div>
+
       <br /><br /><br />
-      <h2>Shipping adress</h2>
+
+      <h3>Shipping adress</h3>
+      <br>
+
       <label for="na">Full Name</label><br />
-      <input type="text" name="name" id="na" placeholder="Enter your name" required/>
-      <i class="fa-solid fa-user"></i> 
+      <div class="inputbox">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" name="name" id="na" placeholder="Enter your name" required />
+      </div>
+
       <br />
+
       <label for="ad">Adress</label><br />
-      <input type="text" name="adress" id="ad" placeholder="Enter your adress" required/>
-    <i class="fa-solid fa-house"></i>
+      <div class="inputbox">
+        <i class="fa-solid fa-house"></i>
+        <input type="text" name="adress" id="ad" placeholder="Enter your adress" required />
+      </div>
+
       <br />
+
       <label for="cty">City</label><br />
-      <input type="text" name="city" id="cty" placeholder="Enter your city" required/>
-      <i class="fa-solid fa-city"></i>
+      <div class="inputbox">
+        <i class="fa-sharp fa-solid fa-city"></i>
+        <input type="text" name="city" id="cty" placeholder="Enter your city" required />
+      </div>
+
       <br />
 
       <label for="">Country</label>
       <!--!&emps boşluk bırakmak için-->
       <br />
-      
-      <select>
-        <option>Html</option>
-        <option>Css</option>
-        <option>JavaScript</option>
-      </select>
-      <i class="fa-solid fa-earth-europe"></i>
-      <label for="">Post Code</label>
+      <div class="inputbox">
+
+        <i class="fa-solid fa-earth-europe"></i>
+        <select>
+          <option selected-value="Turkey">Turkey</option>
+          <option value="Albania">Albania</option>
+          <option value="Anguilla">Anguilla</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Austria">Austria</option>
+          <option value="Azerbaijan">Azerbaijan</option>
+          <option value="Bahamas">Bahamas</option>
+          <option value="Belgium">Belgium</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Bulgaria">Bulgaria</option>
+          <option value="Canada">Canada</option>
+          <option value="Cape Verde">Cape Verde</option>
+          <option value="China">China</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Cuba">Cuba</option>
+          <option value="Cyprus">Cyprus</option>
+          <option value="Denmark">Denmark</option>
+          <option value="Estonia">Estonia</option>
+          <option value="Finland">Finland</option>
+          <option value="France">France</option>
+          <option value="Germany">Germany</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Greece">Greece</option>
+          <option value="Hong Kong">Hong Kong</option>
+          <option value="Hungary">Hungary</option>
+          <option value="İceland">İceland</option>
+          <option value="Italy">Italy</option>
+          <option value="Japan">Japan</option>
+          <option value="Kazakhstan">Kazakhstan</option>
+          <option value="Luxemburg">Luxemburg</option>
+          <option value="Maldives">Maldives</option>
+          <option value="Malta">Malta</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Netherlands">Netherlands</option>
+          <option value="Norway">Norway</option>
+          <option value="Poland">Poland</option>
+          <option value="UK">UK</option>
+          <option value="ABD">ABD</option>
+        </select>
+      </div>
       <br>
-      <input type="text" name="code" id="cod" placeholder="Enter your postal code" required/>
-      <i class="fa-solid fa-envelopes-bulk"></i>
+
+
+      <label for="">Post Code</label>
+      <div class="inputbox">
+        <i class="fa-solid fa-envelopes-bulk"></i>
+        <input type="text" name="code" id="cod" placeholder="Enter your postal code" required />
+      </div>
+
       <br />
-      <input type="checkbox" name="box" id="box1" />
-      <label for="box1">See this information next time</label><br />
-      <button type="submit">Continue</button>
-    </div>
+
+      <div class="check">
+        <input type="checkbox" name="Check-box" id="check-box" />
+        <label for="check-box">See this information next time</label>
+      </div>
+      <br>
+      <div class="btn">
+        <button type="submit">Continue</button>
+      </div>
+    </form>
+
     <div class="resim">
       <!--!ürün resimlerinin ve fiyatlarının bulunduğu div-->
       <div class="canta">
         <!--!resim ile fiyatın olduğu bölümü kapsayan div-->
-        <img src="./25709027-a238-4c32-9e24-380747f64e09.jpg" alt="canta" class="urunresim" />
+        <img src="./images/photo1.png" alt="canta" class="urunresim" />
         <div class="box">
           <!--!resim yanındaki yazıların tamamını kapsayan div-->
           <h3>Vintage Backbag</h3>
-          <p>$54.99 <span class="eski">$94.99</span></p>
+          <p class="span">
+            <span class="sale-price">$<span>54.99</span></span>
+            <span class="first-price"> $<span>94.99</span> </span>
+          </p>
           <!--! artır azalt butonunun bulunduğu bölüm alttaki 3 satır-->
-          <button type="button" onclick="azalt()">-</button>
-          <input type="text" value="0" size="5" id="sayi" name="sayi" />
-          <button type="button" onclick="artir()">+</button>
+          <div class="cerceve">
+            <button type="button" onclick="azalt()">-</button>
+            <div class="count" id="sayi1">1</div>
+            <!-- <input type="text" value="0" size="5" id="sayi" name="sayi" /> -->
+            <button type="button" onclick="artir()">+</button>
+          </div>
         </div>
       </div>
       <div class="ayakkabi">
         <!--!resim ile fiyatın olduğu bölümü kapsayan div-->
-        <img src="./ayakkabı.png" alt="ayakkabi" class="urunresim" />
+        <img src="./images/photo2.png" alt="ayakkabi" class="urunresim" />
         <div class="box1">
           <!--!resim yanındaki yazıların tamamını kapsayan div-->
           <h3>Levi Shoes</h3>
-          <p>$74.99 <span class="eski">$124.99</span></p>
-          <button type="button" onclick="azalt1()">-</button>
-          <input type="text" value="0" size="5" id="sayi1" name="sayi" />
-          <button type="button" onclick="artir1()">+</button>
+          <p class="span">
+            <span class="sale-price">$<span>74.99</span></span>
+            <span class="first-price"> $<span>124.99</span> </span>
+          </p>
+          <div class="cerceve">
+            <button type="button" onclick="azalt1()">-</button>
+            <div class="count" id="sayi2">1</div>
+            <!-- <input type="text" value="0" size="5" id="sayi1" name="sayi" /> -->
+            <button type="button" onclick="artir1()">+</button>
+          </div>
         </div>
       </div>
-      <p class="text1">Shipping <span class="fiyat1">$19</span></p>
-      <p class="text1">Total <span class="fiyat1">$148.98</span></p>
+      <div class="shipping-total">
+        <div class="shipping">
+          <p>Shipping</p>
+          <p>$ <span>19</span></p>
+        </div>
+        <div class="total">
+          <p>Total</p>
+          <p>$ <span>148.98</span></p>
+        </div>
+      </div>
     </div>
   </div>
   <script type="text/javascript">

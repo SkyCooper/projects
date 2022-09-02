@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+header {
+  margin: 2rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2rem;
+  margin: 0 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 80vw;
+
+  h3 {
+    font-size: 1rem;
+  }
+  .form {
+    width: 30%;
+    input {
+      width: 100%;
+      opacity: 0.5;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+    select {
+      padding: 8px 20px;
+      opacity: 0.5;
+      //   border-radius: 10px;
+      border: none;
+      outline: none;
+    }
+    label {
+      //   color: red;
+    }
+    .inputbox {
+      display: flex;
+      align-items: baseline;
+      border: 1px solid grey;
+      border-radius: 10px;
+      padding-left: 10px;
+      i {
+        font-size: 1.4rem;
+        margin: 10px 10px;
+      }
+    }
+    .check {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 0.5rem;
+      
+      label{
+          font-size: 1.2rem;
+
+      }
+      
+      #check-box{
+          width: 50px !important;
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    button {
+      background-color: orange;
+      padding: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .resim {
+    margin-top: 20px;
+    width: 30%;
+    height: 500px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(201, 197, 197, 0.235);
+    border-radius: 10px;
+    padding: 2rem;
+    gap: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    img {
+      border: 1px solid grey;
+      border-radius: 10px;
+      width: 130px;
+      height: 130px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+
+    .canta {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .ayakkabi {
+      display: flex;
+      gap: 30px;
+      justify-content: space-around;
+    }
+    .sale-price {
+      color: orange;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+    .first-price {
+      text-decoration: line-through;
+    }
+    button {
+      padding: 5px;
+      font-weight: bolder;
+      width: 25px;
+      border-radius: 5px;
+    }
+    .cerceve {
+      width: 150px;
+      display: flex;
+      margin-top: 0.5rem;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 5px;
+      justify-content: center;
+      background-color: rgba(158, 152, 152, 0.677);
+    }
+    .count {
+      line-height: 2rem;
+      width: 25px;
+      text-align: center;
+    }
+    .shipping-total {
+      display: flex;
+      flex-direction: column;
+
+      .shipping,
+      .total {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
