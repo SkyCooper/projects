@@ -11,6 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <title>Cooper</title>
+
 </head>
 
 <body>
@@ -22,6 +23,12 @@
         @media (min-width:1200px) {
             .container {
                 max-width: 1200px;
+            }
+        }
+        @media (min-width:990px) {
+            .col {
+                display: flex;
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -74,8 +81,8 @@
     <div class="container">
         <h1>Bootstrap!</h1>
         <div class="row">
-            <div class="col">
-                <div class="card"">
+            <div class="col col-3">
+                <div class="card">
                     <img src=" ./images/resim-2.jpg" class="card-img-top" alt="resim">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -94,8 +101,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="alert alert-danger" role="alert">
+            <div class="col col-6">
+                <div class="alert alert-danger col-12" role="alert">
                     made by @cooper
                 </div>
                 <div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
@@ -132,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col col-3">
                 <div class="card mb-3">
                     <div class="card-header">
                         Featured
