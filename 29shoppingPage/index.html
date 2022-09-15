@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <body>
+    <h1 id="checkout-title">Checkout</h1>
+    <main>
+      <form action="">
+        <div id="contact-information" class="data-form">
+          <h1>Contact information</h1>
+          <div class="campo">
+            <label for="email">Email</label>
+            <div class="input-field">
+              <input type="email" name="email" id="user-email" placeholder="Enter your email..." required>
+              <i class="fas fa-envelope"></i>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="phone">Phone</label>
+            <div class="input-field">
+              <input type="tel" name="phone" id="user-phone-number" placeholder="Enter your phone..." required>
+              <i class="fas fa-phone-alt"></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="shipping-address" class="data-form">
+          <h1>Shipping address</h1>
+          <div class="campo">
+            <label for="full-name">Full name</label>
+            <div class="input-field">
+              <input type="text" name="full-name" id="user-full-name" placeholder="Enter your Full name..." required>
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="campo">
+              <label for="address">Address</label>
+              <div class="input-field">
+                <input type="text" name="address" id="user-address" placeholder="Enter your address..." required>
+                <i class="fas fa-home"></i>
+              </div>
+            </div>
+            <div class="campo">
+              <label for="city">City</label>
+              <div class="input-field">
+                <input type="text" name="city" id="user-city" placeholder="Enter your city..." required>
+                <i class="fas fa-city"></i>
+              </div>
+            </div>
+            <div class="campo" id="country-field">
+              <label for="your-country">Country</label>
+              <div class="input-field">
+                <select name="your-country" id="user-country" required>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Turkey">Germany</option>
+                  <option value="Turkey">USA</option>
+                  <option value="Turkey">Canada</option>
+                  <option value="Turkey">UK</option>
+                </select>
+                <i class="fas fa-globe-europe"></i>
+              </div>
+            </div>
+            <div class="campo" id="postal-code-field">
+              <label for="postal-code">Post Code</label>
+              <div class="input-field">
+                <input type="text" name="postal-code" id="user-postal-code" placeholder="Enter your postal code..."
+                  required>
+                <i class="fas fa-mail-bulk"></i>
+              </div>
+            </div>
+            <div class="campo">
+              <input type="checkbox" name="reminder" id="user-reminder">
+              <label for="reminder">See this information next time</label>
+            </div>
+          </div>
+        </div>
+        <button id="btn-submit" type="submit">
+          Continue
+        </button>
+      </form>
+
+      <div id="products-preview">
+        <div id="product-painel">
+
+          <div class="product">
+            <img src="IMG/photo1.png" alt="">
+            <div class="product-info">
+              <h2>Vintage Backbag</h2>
+              <p><strong>$25.98</strong> <span class="line-through">$34.99</span></p>
+
+              <div class="quantity-controller">
+                <button>
+                  <i class="fas fa-minus bagminus"></i>
+                </button>
+                <p>1</p>
+                <button>
+                  <i class="fas fa-plus bagplus"></i>
+                </button>
+              </div>
+              <div class="remove">
+                <button class="delete" id="delbag">Remove</button>
+              </div>
+              <p class="totals" id="totalbag">Product Total : </p>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="IMG/photo2.png" alt="">
+            <div class="product-info">
+              <h2>Levi Shoes</h2>
+              <p><strong>$45.99</strong> <span class="line-through">$54.99</span></p>
+
+              <div class="quantity-controller">
+                <button>
+                  <i class="fas fa-minus shoeminus"></i>
+                </button>
+                <p>1</p>
+                <button>
+                  <i class="fas fa-plus shoeplus"></i>
+                </button>
+              </div>
+              <div class="remove">
+                <button class="delete" id="delbag">Remove</button>
+              </div>
+              <p class="totals" id="totalbag">Product Total :</p>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="IMG/photo3.jpg" alt="">
+            <div class="product-info">
+              <h2>Antique Clock</h2>
+              <p><strong>$74.99</strong> <span class="line-through">$94.99</span></p>
+
+              <div class="quantity-controller">
+                <button>
+                  <i class="fas fa-minus clockminus"></i>
+                </button>
+                <p>1</p>
+                <button>
+                  <i class="fas fa-plus clockplus"></i>
+                </button>
+              </div>
+              <div class="remove">
+                <button class="delete" id="delbag">Remove</button>
+              </div>
+              <p class="totals" id="totalbag">Product Total :</p>
+            </div>
+          </div>
+
+          <div class="buy-detail" id="subtotal">
+            <p>Subtotal  </p>
+          <p>$0</p>
+          </div>
+          <div class="buy-detail" id="tax">
+            <p>Tax(%18)</p>
+            <p>$0</p>
+          </div>
+          <div class="buy-detail" id="shipping">
+            <p>Shipping</p>
+            <p>$15</p>
+          </div>
+          <div class="buy-detail" id="total">
+            <p>Total</p>
+            <p>$0</p>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </body>
+
+</body>
+
+</html>
