@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Document</title>
+  <title>Shopping Page</title>
 </head>
 
 <body>
@@ -91,14 +91,14 @@
     <div id="products-preview">
       <div id="product-painel">
 
-        <div class="product">
+        <div class="product bagproduct">
           <img src="IMG/photo1.png" alt="">
           <div class="product-info">
             <h2>Vintage Backbag</h2>
             <p><strong>$25.98</strong> <span class="line-through">$34.99</span></p>
 
             <div class="quantity-controller">
-              <button class="bagminus" id="bagminus1">
+              <button class="bagminus">
                 <i class="fas fa-minus"></i>
               </button>
               <p id="bagSum">0</p>
@@ -113,7 +113,7 @@
           </div>
         </div>
 
-        <div class="product">
+        <div class="product shoeproduct">
           <img src="IMG/photo2.png" alt="">
           <div class="product-info">
             <h2>Levi Shoes</h2>
@@ -129,13 +129,13 @@
               </button>
             </div>
             <div class="remove">
-              <button class="delete" id="delbag">Remove</button>
+              <button class="delete" id="delshoe">Remove</button>
             </div>
             <p class="totals">Product Total : <span id="shoetotal"></span></p>
           </div>
         </div>
 
-        <div class="product">
+        <div class="product clockproduct">
           <img src="IMG/photo3.jpg" alt="">
           <div class="product-info">
             <h2>Antique Clock</h2>
@@ -151,7 +151,7 @@
               </button>
             </div>
             <div class="remove">
-              <button class="delete" id="delbag">Remove</button>
+              <button class="delete" id="delclock">Remove</button>
             </div>
             <p class="totals" >Product Total : <span id="clocktotal"></span></p>
           </div>

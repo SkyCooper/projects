@@ -2,16 +2,19 @@ const bagPlus = document.querySelector(".bagplus");
 const bagMinus = document.querySelector(".bagminus");
 const bagSum = document.querySelector("#bagSum");
 const bagTotal = document.querySelector("#bagtotal");
+const bagRemove = document.querySelector("#delbag")
 
 const shoePlus = document.querySelector(".shoeplus");
 const shoeMinus = document.querySelector(".shoeminus");
 const shoeSum = document.querySelector("#shoeSum");
 const shoeTotal = document.querySelector("#shoetotal");
+const shoeRemove = document.querySelector("#delshoe")
 
 const clockPlus = document.querySelector(".clockplus");
 const clockMinus = document.querySelector(".clockminus");
 const clockSum = document.querySelector("#clockSum");
 const clockTotal = document.querySelector("#clocktotal");
+const clockRemove = document.querySelector("#delclock")
 
 const subTotal = document.querySelector("#subtotalPrice");
 const taxPrice = document.querySelector("#taxPrice");
@@ -56,6 +59,15 @@ bagMinus.addEventListener("click", function () {
       ).toFixed(2));
 });
 
+bagRemove.addEventListener("click", function(){
+  document.querySelector(".bagproduct").style.display = "none";
+    bagSum.innerText = 0;
+    bagTotal.innerText = +bagSum.innerText * 25;
+    subTotal.innerText = bagTotal.innerText;
+    taxPrice.innerText = +subTotal.innerText * 0.18;
+    totalPrice.innerText = 0
+})
+
 //!shoe
 
 let sum2 = Number(shoeSum.innerText);
@@ -93,6 +105,15 @@ shoeMinus.addEventListener("click", function () {
         +taxPrice.innerText +
         15
       ).toFixed(2));
+});
+
+shoeRemove.addEventListener("click", function () {
+  document.querySelector(".shoeproduct").style.display = "none";
+    shoeSum.innerText = 0;
+    shoeTotal.innerText = +shoeSum.innerText * 50;
+    subTotal.innerText = shoeTotal.innerText;
+    taxPrice.innerText = +subTotal.innerText * 0.18;
+    totalPrice.innerText = 0
 });
 
 
@@ -133,4 +154,13 @@ clockMinus.addEventListener("click", function () {
         +taxPrice.innerText +
         15
       ).toFixed(2));
+});
+
+clockRemove.addEventListener("click", function () {
+  document.querySelector(".clockproduct").style.display = "none";
+    clockSum.innerText = 0;
+    clockTotal.innerText = +clockSum.innerText * 100;
+    subTotal.innerText = clockTotal.innerText;
+    taxPrice.innerText = +subTotal.innerText * 0.18;
+    totalPrice.innerText = 0
 });
