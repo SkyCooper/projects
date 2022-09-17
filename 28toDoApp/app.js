@@ -15,10 +15,12 @@ addBtn.addEventListener("click", () => {
   if (!langInput.value) {
     alert("Burası boş, bir dil yaz");
   } else if (langInput.value.toLowerCase() == "javascript") {
-    newUl.innerHTML += `<li class="text-danger"> ${langInput.value}</li>`;
+    newUl.innerHTML += `<div>${inputBox.value}</div>
+    <i class="fa-solid fa-trash"></i>`;
     langInput.value = ""; // input içini silmek için
   } else {
-    newUl.innerHTML += `<li> ${langInput.value}</li>`;
+    newUl.innerHTML += `<li class="d-flex justify-content-between"> <i class="fa-solid fa-check-to-slot"></i> <span>${langInput.value} </span>  <i class="fa-solid fa-trash"></i> </li>  `;
+     newUl.className = "styleBtn";
     langInput.value = ""; // input içini silmek için
   }
   langInput.focus(); // eklemeden sonra focus ol

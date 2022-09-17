@@ -6,3 +6,16 @@ section .lang-input {
   width: 20rem;
   height: 2.3rem;
 }
+
+li {
+  list-style-type: none;
+  background-color: lightcoral;
+  margin: 1rem;
+  padding: 1rem;
+  color: black;
+  font-weight: 600;
+}
+
+.demo{
+  
+}
