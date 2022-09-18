@@ -71,9 +71,12 @@ span{
  width: 50%;
  display: inline-block;
 }
+
 p{
  color: red;
  margin-top: 1rem;
+ font-size: 1.3rem;
+
 }
 
 #totalTask, #completedTask{
@@ -88,14 +91,10 @@ p{
 text-decoration: line-through;
 opacity: 0.8;
 background-color: lightgreen;
+
 }
 
-/* .delete{
-  transform: translateX(2rem);
-  opacity: 0;
+@media screen {
+  
 }
 
-.complete li {
-  text-decoration: line-through;
-  opacity: 0.3;
-} */
