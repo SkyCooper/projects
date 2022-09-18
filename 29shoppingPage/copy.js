@@ -2,19 +2,19 @@ const bagPlus = document.querySelector(".bagplus");
 const bagMinus = document.querySelector(".bagminus");
 const bagSum = document.querySelector("#bagSum");
 const bagTotal = document.querySelector("#bagtotal");
-const bagRemove = document.querySelector("#delbag")
+const bagRemove = document.querySelector("#delbag");
 
 const shoePlus = document.querySelector(".shoeplus");
 const shoeMinus = document.querySelector(".shoeminus");
 const shoeSum = document.querySelector("#shoeSum");
 const shoeTotal = document.querySelector("#shoetotal");
-const shoeRemove = document.querySelector("#delshoe")
+const shoeRemove = document.querySelector("#delshoe");
 
 const clockPlus = document.querySelector(".clockplus");
 const clockMinus = document.querySelector(".clockminus");
 const clockSum = document.querySelector("#clockSum");
 const clockTotal = document.querySelector("#clocktotal");
-const clockRemove = document.querySelector("#delclock")
+const clockRemove = document.querySelector("#delclock");
 
 const subTotal = document.querySelector("#subtotalPrice");
 const taxPrice = document.querySelector("#taxPrice");
@@ -35,8 +35,11 @@ const minus1 = () => {
 
 bagPlus.addEventListener("click", function () {
   bagSum.innerText = plus1();
-  bagTotal.innerText = +bagSum.innerText * 25.98;
-  subTotal.innerText = bagTotal.innerText;
+  bagTotal.innerText = +bagSum.innerText * 25;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
   taxPrice.innerText = +subTotal.innerText * 0.18;
   totalPrice.innerText = (
     +subTotal.innerText +
@@ -47,8 +50,11 @@ bagPlus.addEventListener("click", function () {
 
 bagMinus.addEventListener("click", function () {
   bagSum.innerText = minus1();
-  bagTotal.innerText = +bagSum.innerText * 25.98;
-  subTotal.innerText = bagTotal.innerText;
+  bagTotal.innerText = +bagSum.innerText * 25;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
   taxPrice.innerText = +subTotal.innerText * 0.18;
   +totalPrice.innerText < 45
     ? (totalPrice.innerText = 0)
@@ -59,14 +65,17 @@ bagMinus.addEventListener("click", function () {
       ).toFixed(2));
 });
 
-bagRemove.addEventListener("click", function(){
+bagRemove.addEventListener("click", function () {
   document.querySelector(".bagproduct").style.display = "none";
-    bagSum.innerText = 0;
-    bagTotal.innerText = +bagSum.innerText * 25.98;
-    subTotal.innerText = bagTotal.innerText;
-    taxPrice.innerText = +subTotal.innerText * 0.18;
-    totalPrice.innerText = 0
-})
+  bagSum.innerText = 0;
+  bagTotal.innerText = +bagSum.innerText * 25;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
+  taxPrice.innerText = +subTotal.innerText * 0.18;
+  totalPrice.innerText = +subTotal.innerText + +taxPrice.innerText + 15;
+});
 
 //!shoe
 
@@ -83,8 +92,11 @@ const minus2 = () => {
 
 shoePlus.addEventListener("click", function () {
   shoeSum.innerText = plus2();
-  shoeTotal.innerText = +shoeSum.innerText * 45.99;
-  subTotal.innerText = shoeTotal.innerText;
+  shoeTotal.innerText = +shoeSum.innerText * 50;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
   taxPrice.innerText = +subTotal.innerText * 0.18;
   totalPrice.innerText = (
     +subTotal.innerText +
@@ -95,8 +107,11 @@ shoePlus.addEventListener("click", function () {
 
 shoeMinus.addEventListener("click", function () {
   shoeSum.innerText = minus2();
-  shoeTotal.innerText = +shoeSum.innerText * 45.99;
-  subTotal.innerText = shoeTotal.innerText;
+  shoeTotal.innerText = +shoeSum.innerText * 50;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
   taxPrice.innerText = +subTotal.innerText * 0.18;
   +totalPrice.innerText < 45
     ? (totalPrice.innerText = 0)
@@ -109,13 +124,15 @@ shoeMinus.addEventListener("click", function () {
 
 shoeRemove.addEventListener("click", function () {
   document.querySelector(".shoeproduct").style.display = "none";
-    shoeSum.innerText = 0;
-    shoeTotal.innerText = +shoeSum.innerText * 45.99;
-    subTotal.innerText = shoeTotal.innerText;
-    taxPrice.innerText = +subTotal.innerText * 0.18;
-    totalPrice.innerText = 0
+  shoeSum.innerText = 0;
+  shoeTotal.innerText = +shoeSum.innerText * 50;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
+  taxPrice.innerText = +subTotal.innerText * 0.18;
+  totalPrice.innerText = +subTotal.innerText + +taxPrice.innerText + 15;
 });
-
 
 //! Clock
 
@@ -132,8 +149,11 @@ const minus3 = () => {
 
 clockPlus.addEventListener("click", function () {
   clockSum.innerText = plus3();
-  clockTotal.innerText = +clockSum.innerText * 74.99;
-  subTotal.innerText = clockTotal.innerText;
+  clockTotal.innerText = +clockSum.innerText * 100;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
   taxPrice.innerText = +subTotal.innerText * 0.18;
   totalPrice.innerText = (
     +subTotal.innerText +
@@ -144,8 +164,11 @@ clockPlus.addEventListener("click", function () {
 
 clockMinus.addEventListener("click", function () {
   clockSum.innerText = minus3();
-  clockTotal.innerText = +clockSum.innerText * 74.99;
-  subTotal.innerText = clockTotal.innerText;
+  clockTotal.innerText = +clockSum.innerText * 100;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
   taxPrice.innerText = +subTotal.innerText * 0.18;
   +totalPrice.innerText < 45
     ? (totalPrice.innerText = 0)
@@ -158,9 +181,12 @@ clockMinus.addEventListener("click", function () {
 
 clockRemove.addEventListener("click", function () {
   document.querySelector(".clockproduct").style.display = "none";
-    clockSum.innerText = 0;
-    clockTotal.innerText = +clockSum.innerText * 74.99;
-    subTotal.innerText = clockTotal.innerText;
-    taxPrice.innerText = +subTotal.innerText * 0.18;
-    totalPrice.innerText = 0
+  clockSum.innerText = 0;
+  clockTotal.innerText = +clockSum.innerText * 100;
+  subTotal.innerText =
+    Number(bagTotal.innerText) +
+    Number(shoeTotal.innerText) +
+    Number(clockTotal.innerText);
+  taxPrice.innerText = +subTotal.innerText * 0.18;
+  totalPrice.innerText = +subTotal.innerText + +taxPrice.innerText + 15;
 });

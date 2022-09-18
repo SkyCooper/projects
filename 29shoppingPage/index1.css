@@ -15,9 +15,10 @@ main {
   display: grid;
   grid-template-columns: 465px 320px;
 }
+
 #checkout-title {
   font-family: Mon, Arial, Helvetica, sans-serif;
-  text-align: center;
+  text-align:center;
   margin: 15px 0;
 }
 main form {
