@@ -1,56 +1,59 @@
-console.log("**** app.js *******");
+const addBtn = document.querySelector("#add");
+const delBtn = document.querySelector("#delete");
+const input = document.querySelector("#input");
+const ul = document.querySelector("#ul");
+const totalTask = document.querySelector("#totalTask");
+const completedTask = document.querySelector("#completedTask");
 
-//todo selectors tanımlandı
-const langInput = document.querySelector(".lang-input");
-const addBtn = document.querySelector("#add-btn");
-const deleteBtn = document.querySelector("#delete-btn");
-const langList = document.getElementById("lang-list");
+const checked = document.querySelector(".checked");
+const deleted = document.querySelectorAll("#del1");
 
-// olmayan bir ul yapıldı ve section içine koyuldu.
-const newUl = document.createElement("ul");
-langList.appendChild(newUl);
+let array = [];
+let sum = 0;
+let completed = 0;
 
-//todo addBtn event handler
-addBtn.addEventListener("click", () => {
-  if (!langInput.value) {
-    alert("Burası boş, bir dil yaz");
-  } else if (langInput.value.toLowerCase() == "javascript") {
-    newUl.innerHTML += `<div>${inputBox.value}</div>
-    <i class="fa-solid fa-trash"></i>`;
-    langInput.value = ""; // input içini silmek için
-  } else {
-    newUl.innerHTML += `<li class="d-flex justify-content-between"> <i class="fa-solid fa-check-to-slot"></i> <span>${langInput.value} </span>  <i class="fa-solid fa-trash"></i> </li>  `;
-     newUl.className = "styleBtn";
-    langInput.value = ""; // input içini silmek için
-  }
-  langInput.focus(); // eklemeden sonra focus ol
-});
-
-
-//todo deleteBtn event handler
-deleteBtn.addEventListener("click", function () {
-  newUl.childElementCount > 0
-    ? newUl.removeChild(newUl.lastElementChild)
-    : alert(`Silinecek eleman kalmadı`);
-  langInput.focus(); // sildikten sonra focus ol
-});
-
-
-//todo enter key / delete key  event handler
-langInput.addEventListener('keydown', (event)=> {
-    // console.log(event); // basılan tuşu döndürür.
-    // console.log(event.target); // event nereden gelir, onu döndürür.
-    // console.log(event.keyCode); // keycode --> numara
-    // console.log(event.code); // code --> tuş ismi
-    // console.log(event.key); // key --> tuş ismi
-     if (event.key === "Enter"){addBtn.click();}
-})
-
-langInput.addEventListener("keydown", (event) => {
-  event.key === "Delete" &&  deleteBtn.click() }
-);
-
-//* onLoad event handler
 window.addEventListener("load", () => {
-  langInput.focus(); // sayfa refresh olduğunda focus ol
+  input.focus();
+});
+
+addBtn.addEventListener("click", function () {
+  if (!input.value) {
+    alert(`Enter a task`);
+  } else {
+    ul.innerHTML += ` <li> <button class="check" id="checked"><i class="fa-solid fa-check"></i></button> <span> ${input.value}</span> <button class="trash" id="del1"><i class="fa-solid fa-trash"></i></button> </li>`;
+    input.value = "";
+    input.focus();
+    array.push("input.value");
+    sum += 1;
+    totalTask.innerText = `${sum}`;
+  }
+});
+
+delBtn.addEventListener("click", () => {
+  ul.childElementCount > 0
+    ? ul.removeChild(ul.lastElementChild)
+    : alert(`All tasks deleted`);
+  input.focus();
+  array.pop();
+  sum -= 1;
+  totalTask.innerText = `${sum}`;
+});
+
+input.addEventListener("keydown", (e) => {
+  e.key === "Enter" && addBtn.click();
+  e.key === "Delete" && delBtn.click();
+});
+
+ul.addEventListener("click", (event) => {
+  if (event.target.className == "check") {
+    event.target.nextElementSibling.classList.toggle("line-through");
+    completed++;
+    completedTask.innerText = `${completed}`;
+  } else if (event.target.className == "trash") {
+    event.target.parentElement.remove();
+    sum -= 1;
+    totalTask.innerText = `${sum}`;
+     completed--;
+     completedTask.innerText = `${completed}`;
+  }
 });

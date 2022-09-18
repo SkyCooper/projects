@@ -1,58 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event Example-2</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-
-  </style>
-
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>To Do App</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div class="container mt-4">
-    <h1 class="text-center text-danger">Things Plannning To-Do <i class="fas text-dark fa-clipboard-list"></i> </h1>
-    <main>
+ <div class="container">
+   
 
-      <div class="form-floating d-flex justify-content-center gap-2 mt-3">
-        <textarea type="text" class="form-control lang-input " id="comment" placeholder="I will do.."></textarea>
-        <label for="comment">I will do..</label>
-            <button id="add-btn" class="btn btn-success px-5">ADD</button>
-            <button id="delete-btn" class="btn btn-danger px-5">DELETE</button>
-      </div>
+  <div class="title">
+   <h1>Planning To-Do <i class="fas fa-clipboard-list"></i> </h1>
+   <p>Total tasks : <span id="totalTask"></span></p>
+   <p>Copmleted tasks : <span id="completedTask"></span></p>
+  </div>
 
-
-      <section id="lang-list" class="border border-2 border-danger m-auto mt-3">
-        <!-- burası boş, girilen veriler burada tutulacak -->
-
-        <div class="d-flex justify-content-between"></div>
-
-      </section>
-    </main>
+  <div id="entries" class="enter">
+   <input id="input" type="text" >
+   <button id="add">Add</button>
+   <button id="delete">Delete</button>
   </div>
 
 
+  <div class="result">
+   <ul id="ul">
+<!-- to-do burada listelenecek -->
+   </ul>
+  </div>
+
+ </div>
 
 
 
-
-
-
-  <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-    crossorigin="anonymous"></script>
-  <script src="app.js"></script>
+ <script src="app.js"></script>
 </body>
-
 </html>
+

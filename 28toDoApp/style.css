@@ -1,21 +1,101 @@
-section button {
-  width: 5rem;
-  height: 2.3rem;
-}
-section .lang-input {
-  width: 20rem;
-  height: 2.3rem;
-}
-
-li {
-  list-style-type: none;
-  background-color: lightcoral;
-  margin: 1rem;
-  padding: 1rem;
-  color: black;
-  font-weight: 600;
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: Arial, Helvetica, sans-serif;
+ list-style-type: none;
 }
 
-.demo{
-  
+body{
+ background-color: bisque;
 }
+
+.container{
+width: 80vw;
+margin:5rem auto;
+}
+
+.title{
+text-align: center;
+margin: 2rem 0;
+}
+.entries{
+ align-items: center;
+}
+
+input{
+ padding: 1rem;
+ border: 2px solid goldenrod;
+ border-radius: 10px;
+ font-size: 1rem;
+ width: 65%;
+}
+
+button{
+ padding: 1rem 2rem;
+ border: 2px solid black;
+ border-radius: 10px;
+ font-size: 1rem;
+ font-weight: 600;
+ margin-left: 1rem;
+ transition: all 0.5s;
+ background-color:beige;
+}
+
+#add:hover, #checked:hover{
+ background-color:  lightgreen;
+ cursor: pointer;
+}
+
+#delete:hover, #del1:hover{
+ background-color: red;
+ cursor: pointer;
+}
+
+button:active{
+   transform: scale(95%);
+}
+
+li{
+ padding: 1rem 0;
+ font-style: oblique;
+ font-weight: 200;
+ font-size: 1.2rem;
+}
+
+span{
+ padding: 1rem 2rem;
+ background-color:beige;
+ border: 1px solid black;
+ border-radius: 10px;
+ width: 50%;
+ display: inline-block;
+}
+p{
+ color: red;
+ margin-top: 1rem;
+}
+
+#totalTask, #completedTask{
+ display: inline;
+ padding: 0 10px;
+ border: none;
+ background-color: bisque ;
+
+}
+
+.line-through{
+text-decoration: line-through;
+opacity: 0.8;
+background-color: lightgreen;
+}
+
+/* .delete{
+  transform: translateX(2rem);
+  opacity: 0;
+}
+
+.complete li {
+  text-decoration: line-through;
+  opacity: 0.3;
+} */
