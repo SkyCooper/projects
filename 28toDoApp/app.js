@@ -20,7 +20,7 @@ addBtn.addEventListener("click", function () {
   if (!input.value) {
     alert(`Enter a task`);
   } else {
-    ul.innerHTML += ` <li> <button class="check" id="checked"><i class="fa-solid fa-check"></i></button> <span id="value"> ${input.value}</span> <button class="trash" id="del1"><i class="fa-solid fa-trash"></i></button> </li>`;
+    ul.innerHTML += ` <li> <button class="check" id="checked">✔</i></button> <span id="value"> ${input.value}</span> <button class="trash" id="del1">🗑</i></button> </li>`;
     input.value = "";
     input.focus();
     array.push("input.value");
