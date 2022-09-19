@@ -18,7 +18,7 @@ checkBtn.addEventListener("click", function () {
   } else if (right > 0) {
     if (guess.value == randomNumber) {
       qmark.innerText = randomNumber + "👏";
-      body.style.backgroundColor = "green";
+      body.style.backgroundColor = "lightseagreen";
       topScore.innerText = right;
       msg.innerText = "Congrulations you won!! ✔ 😎";
     } else if (guess.value < randomNumber) {
@@ -36,7 +36,7 @@ checkBtn.addEventListener("click", function () {
     }
   } else {
     qmark.innerText = randomNumber + "🧨";
-    body.style.backgroundColor = "red";
+    body.style.backgroundColor = "lightsalmon";
     topScore.innerText = right;
     msg.innerText = "Sorry you lost!! ✔ 🤔";
   }

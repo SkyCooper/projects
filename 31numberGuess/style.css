@@ -13,6 +13,7 @@ font-family: 'Bungee Spice', cursive;
   /* text-align: center; */
   margin: auto;
   background-color: antiquewhite;
+  border: 5px solid black;
 }
 
 .title{
@@ -29,10 +30,17 @@ button{
 padding: 1rem 2rem;
 border-radius: 10px;
 cursor: pointer;
-transition: all 1s;
+transition: all 0.5s;
 }
 
-button:hover{
+button:active{
+transform: scale(95%);
+}
+
+.check:hover{
+background-color: lightseagreen;
+}
+.again:hover{
 background-color: lightsalmon;
 }
 
