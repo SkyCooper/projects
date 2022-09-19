@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box ;
+font-family: 'Bungee Spice', cursive;
+}
+
+.container{
+  height: 100vh;
+  width: 80vw;
+  /* text-align: center; */
+  margin: auto;
+  background-color: antiquewhite;
+}
+
+.title{
+  /* margin: 2rem 0; */
+}
+
+input{
+padding: 1rem 2rem;
+border-radius: 10px;
+font-size: 1rem;
+}
+
+button{
+padding: 1rem 2rem;
+border-radius: 10px;
+cursor: pointer;
+transition: all 1s;
+}
+
+button:hover{
+background-color: lightsalmon;
+}
+
+
+h2{
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+h3, p{
+  padding: 1rem;
+  text-align: left;
+}
+
+p{
+  text-align: justify;
+}
+
+hr{
+border: 3px solid black;
+}
+
+.header{
+  /* border: 3px solid black; */
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.secret p{
+  text-align: center;
+}
+
+.qmark{
+  border: 2px solid black;
+  outline: 3px solid black;
+  outline-offset: 5px;
+  width: 20%;
+  margin: auto;
+  font-size: 2rem;
+}
+
+.main *{
+  text-align: center;
+}
+
+.bottom{
+  margin: auto;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
