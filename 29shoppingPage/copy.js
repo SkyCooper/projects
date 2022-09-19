@@ -35,7 +35,7 @@ const minus1 = () => {
 
 bagPlus.addEventListener("click", function () {
   bagSum.innerText = plus1();
-  bagTotal.innerText = +bagSum.innerText * 25;
+  bagTotal.innerText = +bagSum.innerText * 25.98;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -50,7 +50,7 @@ bagPlus.addEventListener("click", function () {
 
 bagMinus.addEventListener("click", function () {
   bagSum.innerText = minus1();
-  bagTotal.innerText = +bagSum.innerText * 25;
+  bagTotal.innerText = +bagSum.innerText * 25.98;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -68,7 +68,7 @@ bagMinus.addEventListener("click", function () {
 bagRemove.addEventListener("click", function () {
   document.querySelector(".bagproduct").style.display = "none";
   bagSum.innerText = 0;
-  bagTotal.innerText = +bagSum.innerText * 25;
+  bagTotal.innerText = +bagSum.innerText * 25.98;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -92,7 +92,7 @@ const minus2 = () => {
 
 shoePlus.addEventListener("click", function () {
   shoeSum.innerText = plus2();
-  shoeTotal.innerText = +shoeSum.innerText * 50;
+  shoeTotal.innerText = +shoeSum.innerText * 45.99;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -107,7 +107,7 @@ shoePlus.addEventListener("click", function () {
 
 shoeMinus.addEventListener("click", function () {
   shoeSum.innerText = minus2();
-  shoeTotal.innerText = +shoeSum.innerText * 50;
+  shoeTotal.innerText = +shoeSum.innerText * 45.99;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -125,7 +125,7 @@ shoeMinus.addEventListener("click", function () {
 shoeRemove.addEventListener("click", function () {
   document.querySelector(".shoeproduct").style.display = "none";
   shoeSum.innerText = 0;
-  shoeTotal.innerText = +shoeSum.innerText * 50;
+  shoeTotal.innerText = +shoeSum.innerText * 45.99;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -149,7 +149,7 @@ const minus3 = () => {
 
 clockPlus.addEventListener("click", function () {
   clockSum.innerText = plus3();
-  clockTotal.innerText = +clockSum.innerText * 100;
+  clockTotal.innerText = +clockSum.innerText * 74.99;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -164,7 +164,7 @@ clockPlus.addEventListener("click", function () {
 
 clockMinus.addEventListener("click", function () {
   clockSum.innerText = minus3();
-  clockTotal.innerText = +clockSum.innerText * 100;
+  clockTotal.innerText = +clockSum.innerText * 74.99;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
@@ -182,7 +182,7 @@ clockMinus.addEventListener("click", function () {
 clockRemove.addEventListener("click", function () {
   document.querySelector(".clockproduct").style.display = "none";
   clockSum.innerText = 0;
-  clockTotal.innerText = +clockSum.innerText * 100;
+  clockTotal.innerText = +clockSum.innerText * 74.99;
   subTotal.innerText =
     Number(bagTotal.innerText) +
     Number(shoeTotal.innerText) +
