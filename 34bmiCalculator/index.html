@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Cooper BMI Calculator</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt4-HjvFzONasi-0I-7iimFFvGCHpKmZyBEw&usqp=CAU"
+          alt="" width="60px">
+
+      </div>
+
+      <div class="icons">
+
+        <button class="btn">
+          <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </button>
+
+        <button class="btn">
+          <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </button>
+
+        <button class="btn">
+          <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </button>
+
+      </div>
+
+    </header>
+
+    <main>
+
+      <section class="image">
+        <img src="./bmi.png" alt="" width="100%">
+      </section>
+
+      <section class="inputs">
+        <div>
+          <h1>Body Mass Index</h1>
+          <p>Enter your values to see your BMI</p>
+        </div>
+        <div>
+          <form action="">
+            <input type="number" name="weight" id="weight" placeholder="Weight.. ( Ex : 75 )"> <br> <br>
+            <input type="number" name="height" id="height" placeholder="Height.. ( Ex : 1,75 )"> <br> <br>
+            <input type="button" value="SUBMIT" id="submit">
+            <input type="reset" value="RESET" id="reset">
+          </form>
+        </div>
+
+        <div class="output">
+          <span class=""></span>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer>
+      <div class="coop">
+        <img src="./01-people-avatar-512.webp" alt="" width="120px">
+        <p>@ Cooper, 2022</p>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

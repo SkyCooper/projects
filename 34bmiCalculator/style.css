@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #605e87;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+}
+
+.btn {
+  height: 40px;
+  width: 40px;
+  border: 2px solid azure;
+  border-radius: 50%;
+  color: azure;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.btn:hover{
+color: black;
+background-color:lightsalmon;
+transform: scale(110%);
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 60vh;
+}
+h1 {
+  color: gold;
+  font-size: 2rem;
+}
+
+p {
+  color: white;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.image {
+  margin: auto;
+  width: 50%;
+}
+
+.inputs {
+  width: 50%;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#submit {
+  cursor: pointer;
+  background-color: lightgreen;
+  margin-bottom: 1rem;
+}
+
+#reset {
+  cursor: pointer;
+  background-color: lightcoral;
+}
+
+span {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.underweight {
+  background-color: lightsalmon;
+  border: 2px solid black;
+}
+
+.normal {
+  background-color: lightgreen;
+  border: 2px solid black;
+}
+
+.overweight {
+  background-color: lightskyblue;
+  border: 2px solid black;
+}
+
+.obese {
+  background-color: red;
+  color: aliceblue;
+  border: 2px solid black;
+}
+
+footer{
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
