@@ -125,6 +125,7 @@ main form {
   width: 40%;
   border-radius: 10px;
   margin-right: 20px;
+   box-shadow: 4px 4px 14px;
 }
 .product-info {
   font-family: Mon, Arial, Helvetica, sans-serif;
