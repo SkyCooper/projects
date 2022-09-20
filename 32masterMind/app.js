@@ -19,34 +19,50 @@
 // Not: Verilecek olan bilgide + ve - 'lerin sırasının bir önemi yoktur.
 // Bir sayı belirleyerek mastermind oyununu oynatan programı yazınız.
 
-let randomNumber = "" + Math.round(Math.random() * 9000 + 1000);
+// let randomNumber = "" + Math.round(Math.random() * 9000 + 1000);
+// console.log(randomNumber);
+// console.log(typeof randomNumber);
+
+const rnum = () => {
+  let sayi = "" + Math.round(Math.random() * 9000 + 1000);
+  if (new Set(sayi).size == 4) {
+    return sayi;
+  } else {
+    return rnum();
+  }
+};
+
+let randomNumber = rnum();
 console.log(randomNumber);
-console.log(typeof randomNumber);
 
 let sum;
 let number;
 
 for (let i = 0; i < 10; i++) {
   number = prompt("sayı gir");
-  if (9 - i === 0) {
-    console.log("Hakkınız bitti, Sayı: ", randomNumber);
-    break;
-  }
-  sum = 0;
-  if (number == randomNumber) {
-    console.log("Tebrikler bildiniz.");
-    break;
-  }
-  for (let j = 0; j < 4; j++) {
-    for (let k = 0; k < 4; k++) {
-      if (number[j] == randomNumber[k]) {
-        if (j == k) {
-          console.log("+");
-        } else {
-          console.log("-");
+  if (new Set(number).size < 4) {
+    alert("Rakamları tamamı farklı olan sayı gir");
+  } else {
+    if (9 - i === 0) {
+      console.log("Hakkınız bitti, Sayı: ", randomNumber);
+      break;
+    }
+    sum = 0;
+    if (number == randomNumber) {
+      console.log("Tebrikler bildiniz.");
+      break;
+    }
+    for (let j = 0; j < 4; j++) {
+      for (let k = 0; k < 4; k++) {
+        if (number[j] == randomNumber[k]) {
+          if (j == k) {
+            console.log("+");
+          } else {
+            console.log("-");
+          }
         }
       }
     }
+    console.log("Kalan hak:", 9 - i);
   }
-  console.log("\nKalan hak:", 9 - i);
 }
