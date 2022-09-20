@@ -20,33 +20,30 @@
 // Bir sayı belirleyerek mastermind oyununu oynatan programı yazınız.
 
 let randomNumber = "" + Math.round(Math.random() * 9000 + 1000);
+randomNumber = randomNumber.split("");
 console.log(randomNumber);
 console.log(typeof randomNumber);
 
 let sum;
-let number;
 
 for (let i = 0; i < 10; i++) {
-  number = prompt("sayı gir");
+  let number = prompt("sayı gir");
+  number = number.split("");
   if (9 - i === 0) {
-    console.log("Hakkınız bitti, Sayı: ", randomNumber);
+    console.log("Hakkınız bitti, Sayı: ", randomNumber.join(""));
     break;
   }
   sum = 0;
-  if (number == randomNumber) {
+  if (number.join() == randomNumber.join()) {
     console.log("Tebrikler bildiniz.");
     break;
   }
-  for (let j = 0; j < 4; j++) {
-    for (let k = 0; k < 4; k++) {
-      if (number[j] == randomNumber[k]) {
-        if (j == k) {
-          console.log("+");
-        } else {
-          console.log("-");
-        }
+  for (j in number) {
+    if (randomNumber.includes(number[j])) {
+     (number[j] == randomNumber[j]) ?  console.log("+") : console.log("-")
       }
     }
+    console.log("Kalan hak:", 9 - i);
   }
-  console.log("\nKalan hak:", 9 - i);
-}
+
+
