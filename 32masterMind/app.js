@@ -23,46 +23,88 @@
 // console.log(randomNumber);
 // console.log(typeof randomNumber);
 
-const rnum = () => {
+const randomNum = () => {
   let sayi = "" + Math.round(Math.random() * 9000 + 1000);
   if (new Set(sayi).size == 4) {
     return sayi;
   } else {
-    return rnum();
+    return randomNum();
   }
 };
 
-let randomNumber = rnum();
+let randomNumber = randomNum();
 console.log(randomNumber);
 
 let sum;
 let number;
 
-for (let i = 0; i < 10; i++) {
-  number = prompt("sayı gir");
-  if (new Set(number).size < 4) {
-    alert("Rakamları tamamı farklı olan sayı gir");
-  } else {
-    if (9 - i === 0) {
-      console.log("Hakkınız bitti, Sayı: ", randomNumber);
-      break;
-    }
-    sum = 0;
-    if (number == randomNumber) {
-      console.log("Tebrikler bildiniz.");
-      break;
-    }
-    for (let j = 0; j < 4; j++) {
-      for (let k = 0; k < 4; k++) {
-        if (number[j] == randomNumber[k]) {
-          if (j == k) {
-            console.log("+");
-          } else {
-            console.log("-");
+// for (let i = 0; i < 10; i++) {
+//   number = prompt("sayı gir");
+//   if (new Set(number).size < 4) {
+//     alert("Rakamları tamamı farklı olan sayı gir");
+//   } else {
+//     if (9 - i === 0) {
+//       console.log("Hakkınız bitti, Sayı: ", randomNumber);
+//       break;
+//     }
+//     sum = 0;
+//     if (number == randomNumber) {
+//       console.log("Tebrikler bildiniz.");
+//       break;
+//     }
+//     for (let j = 0; j < 4; j++) {
+//       for (let k = 0; k < 4; k++) {
+//         if (number[j] == randomNumber[k]) {
+//           if (j == k) {
+//             console.log("+");
+//           } else {
+//             console.log("-");
+//           }
+//         }
+//       }
+//     }
+//     console.log("Kalan hak:", 9 - i);
+//   }
+// }
+
+
+const btnEnter = document.getElementById("enter")
+const guessNumber = document.getElementById("number")
+const ol = document.getElementById("result")
+console.log(btnEnter);
+
+btnEnter.addEventListener("click", ()=>{
+  // confirm("Are you ready to start?")
+  // alert("Enter uniq four digit number")
+  guessNumber.focus()
+
+  for (let i = 0; i < 10; i++) {
+    number = guessNumber.value;
+    if (new Set(number).size < 4) {
+      alert("Rakamları tamamı farklı olan sayı gir");
+    } else {
+      if (9 - i === 0) {
+        alert("Hakkınız bitti, bilemedin");
+        ol.innerHTML = `<li>THE hidden number is ${randomNumber} </li>`
+        break;
+      }
+      sum = 0;
+      if (number == randomNumber) {
+          ol.innerHTML = `<li>Tebrikler bildiniz. ${randomNumber} </li>`;
+        break;
+      }
+      for (let j = 0; j < 4; j++) {
+        for (let k = 0; k < 4; k++) {
+          if (number[j] == randomNumber[k]) {
+            if (j == k) {
+              console.log("+");
+            } else {
+              console.log("-");
+            }
           }
         }
       }
+      console.log("Kalan hak:", 9 - i);
     }
-    console.log("Kalan hak:", 9 - i);
   }
-}
+})
