@@ -24,12 +24,23 @@
 // "{[]}"       True
 // ""           True
 
+//* def isValid(s) : pyton çözümü
+//*    while "()" in s or "[]" in s or "{}" in s:
+//*         s = s.replace("()", "").replace("[]", "").replace("{}", "")
+//*     return s == ""
 
 const brackets1 = "{ [ ( ] ) }";        //* false
 const brackets2 = "[([({})})({})]";     //* false
+const brackets3 = "[({})]"              //* true
 
-const bracketValidator = (s) =>{
-while(){
-  
+const bracketValidator = (str) =>{
+while (str.includes("()") || str.includes("[]") || str.includes("{}")){
+  str = str.replace("()", "").replace("[]", "").replace("{}", "");
 }
+return str === ""
 }
+console.log(bracketValidator(brackets1));
+ 
+
+
+
