@@ -39,8 +39,5 @@ while (str.includes("()") || str.includes("[]") || str.includes("{}")){
 }
 return str === ""
 }
+
 console.log(bracketValidator(brackets1));
- 
-
-
-

@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
 
-*{
- margin: 0;
- padding: 0;
- box-sizing: border-box ;
-font-family: 'Bungee Spice', cursive;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bungee Spice", cursive;
 }
 
-.container{
+.container {
   height: 100vh;
   width: 80vw;
   /* text-align: center; */
@@ -16,55 +16,55 @@ font-family: 'Bungee Spice', cursive;
   border: 5px solid black;
 }
 
-.title{
+.title {
   /* margin: 2rem 0; */
 }
 
-input{
-padding: 1rem 2rem;
-border-radius: 10px;
-font-size: 1rem;
+input {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
-button{
-padding: 1rem 2rem;
-border-radius: 10px;
-cursor: pointer;
-transition: all 0.5s;
+button {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
-button:active{
-transform: scale(95%);
+button:active {
+  transform: scale(95%);
 }
 
-.check:hover{
-background-color: lightseagreen;
+.check:hover {
+  background-color: lightseagreen;
 }
-.again:hover{
-background-color: lightsalmon;
+.again:hover {
+  background-color: lightsalmon;
 }
 
-
-h2{
+h2 {
   text-align: center;
   padding: 0.5rem;
   font-size: 2rem;
 }
 
-h3, p{
+h3,
+p {
   padding: 1rem;
   text-align: left;
 }
 
-p{
+p {
   text-align: justify;
 }
 
-hr{
-border: 3px solid black;
+hr {
+  border: 3px solid black;
 }
 
-.header{
+.header {
   /* border: 3px solid black; */
   width: 50%;
   margin: 2rem auto;
@@ -72,11 +72,11 @@ border: 3px solid black;
   text-align: center;
 }
 
-.secret p{
+.secret p {
   text-align: center;
 }
 
-.qmark{
+.qmark {
   border: 2px solid black;
   outline: 3px solid black;
   outline-offset: 5px;
@@ -85,15 +85,39 @@ border: 3px solid black;
   font-size: 2rem;
 }
 
-.main *{
+.main * {
   text-align: center;
 }
 
-.bottom{
+.bottom {
   margin: auto;
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-top: 1rem;
+}
+
+/* media query */
+
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  body{
+    background-color: burlywood;
+  }
+  .container {
+    height: 70vh;
+    font-size: 10px;
+  }
+
+  .qmark {
+    width: 60%;
+  }
+
+  .check{
+    margin-top: 10px;
+  }
+
+  #hr, .tips{
+    display: none;
+  }
 }
