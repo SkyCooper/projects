@@ -77,7 +77,7 @@ console.log(info);
         </li>
       </ul>
       <div class="card-body text-center">
-        <a href="${googleMaps}" class="card-link">Google Maps</a>
+        <a href="${googleMaps}" target="_blank" class="card-link">Google Maps</a>
       </div>
     </div>  `;
 };
