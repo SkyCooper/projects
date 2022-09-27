@@ -13,14 +13,14 @@ const userInfo = (users) => {
     const { login, avatar_url, id } = user;
     userDiv.innerHTML += `
     <div class="col-md-6 col-lg-4 col-xl-3">
-      <div class="card" style="width: 18rem;">
+      <div class="card border-dark" style="width: 18rem;">
       <img src="${avatar_url}" class="card-img-top" alt="...">
       <ul class="list-group list-group-flush">
         <li class="list-group-item">Login Name : ${login} </li>
         <li class="list-group-item">ID Number : ${id} </li>
       </ul>
         <div class="card-body">
-        <a href="${url}" class="card-link">Link</a>
+          <a href="https://github.com/${login}" class="card-link">https://github.com/${login}</a>
         </div>
       </div>
     </div>
