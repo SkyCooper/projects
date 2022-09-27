@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(../netflixclone/image/background_image.jpg);
+  background-image: url(./netflix-background.png);
   background-size: cover;
   background-position: center;
   /* background-repeat: no-repeat; */
@@ -16,7 +16,7 @@ body {
 }
 
 .gri {
-  background-color: rgba(6, 6, 6, 0.71);
+  background-color: rgba(6, 6, 6, 0.55);
 }
 header {
   /* border: 5px solid red; */
