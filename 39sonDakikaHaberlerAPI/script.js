@@ -1,17 +1,30 @@
+//? country Possible options (ülke değiştirmek için):
+const array =["br", "ae", "tw", "ua", "us", "ve", "za"]
+const selectCountry = document.querySelector(".form-check");
+const upperList = document.querySelector("#upper-list")
+
+array.forEach(item => {
+  selectCountry.innerHTML += `
+      <input type="radio" name="country" id="${item}" value="${item}">
+      <label for="${item}">${item}</label>
+  `;
+});
+
 const newsQuerry = (cName) => {
   const url = `https://newsapi.org/v2/top-headlines?country=${cName}&apiKey=`;
   const apiKey = "2ae73e0e340345b39a263c6557eb8796";
   fetch(url + apiKey)
     .then((res) => res.json())
     .then((data) => news(data));
+    console.log(cName);
 };
 
+const newsDiv = document.querySelector("#news-list");
 const news = (data) => {
   const { articles } = data;
   console.log(articles);
   articles.forEach((item) => {
     const { title, description, urlToImage, url } = item;
-    const newsDiv = document.querySelector("#news-list");
     newsDiv.innerHTML += `
     <div class="col-md-6 col-lg-4 col-xl-3">
       <div class="card">
@@ -27,8 +40,10 @@ const news = (data) => {
   });
 };
 
-//? country Possible options (ülke değiştirmek için):
-//* ae ar at au be bg br ca ch cn co cu cz de eg fr gb gr hk hu id ie il in it jp kr lt lv ma mx my ng nl no nz ph pl pt ro rs ru sa se sg si sk th tr tw ua us ve za.
-
 window.addEventListener("load", newsQuerry("tr"));
 
+
+selectCountry.addEventListener("click", (e)=>{
+  newsDiv.innerText = "";
+  newsQuerry(e.target.value);
+})
