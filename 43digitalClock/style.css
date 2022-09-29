@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
+:root {
+  --change-color: rgb(76, 217, 105), rgb(52, 170, 220), rgb(88, 86, 217),
+    rgb(255, 45, 83);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +17,14 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: bisque;
-  /* color: blue; */
-  /* background-image: url(https://i.gifer.com/F6VQ.gif); */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to right, var(--change-color));
+  animation: changeColor 2s linear infinite;
+}
+
+@keyframes changeColor {
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .text {
@@ -30,10 +37,11 @@
   letter-spacing: 5px;
   color: white;
 }
+
 h1 {
   font-size: 6rem;
-
 }
+
 
 p {
   margin-top: 1rem;
@@ -45,7 +53,6 @@ p {
 span {
   margin-top: 1rem;
   opacity: 0.5;
-
 }
 
 sup {
