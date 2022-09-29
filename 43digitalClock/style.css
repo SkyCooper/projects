@@ -1,19 +1,54 @@
-*{ margin: 0; padding: 0; box-sizing: border-box;}
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
-.container{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background-color: bisque;
-  color: blue;
+  /* color: blue; */
+  /* background-image: url(https://i.gifer.com/F6VQ.gif); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-p{
-  font-size: 4rem;
+.text {
+  background-color: lightseagreen;
+  padding: 1rem;
+  /* opacity: 0.5; */
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 5px;
+  color: white;
+}
+h1 {
+  font-size: 6rem;
+
 }
 
-sup{
+p {
+  margin-top: 1rem;
   font-size: 2rem;
+  background-color: rgb(103, 179, 175);
+  opacity: 0.8;
+}
+
+span {
+  margin-top: 1rem;
+  opacity: 0.5;
+
+}
+
+sup {
+  font-size: 2.5rem;
+  color: red;
 }
