@@ -1,5 +1,5 @@
 const form = document.querySelector("section.top-banner form");
-const input = document.querySelector(".container input");
+const input = document.querySelector(".container input#inputSearch");
 const msg = document.querySelector("span.msg");
 const list = document.querySelector(".ajax-section .cities");
 
@@ -21,6 +21,10 @@ form.addEventListener("submit", (event) => {
   getWeatherDataFromApi();
 });
 
+let lang = "tr";
+let units = "metric";
+let degree = "°C";
+
 //Get api func. (http method == verbs)
 const getWeatherDataFromApi = async () => {
   // alert("http request is gone!")
@@ -29,8 +33,6 @@ const getWeatherDataFromApi = async () => {
   const tokenKey = DecryptStringAES(localStorage.getItem("tokenKey"));
   console.log(tokenKey); // test etmek için yazdık,
   const inputValue = input.value;
-  const units = "metric";
-  const lang = "tr";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${tokenKey}&units=${units}&lang=${lang}`;
 
   try {
@@ -38,7 +40,8 @@ const getWeatherDataFromApi = async () => {
     // const response = await axios(url)  //! axios ile yapılışı
     console.log(response);
 
-    const { main, sys, weather, name } = response;
+    let { main, sys, weather, name } = response;
+    name = name.replace(" Province", "");
     // const { main, sys, weather, name } = response.data; //!axios için
 
     //  bunlardan sadece bir tanesi kullanılması yeterli (OpenWeather icon)
@@ -75,7 +78,7 @@ const getWeatherDataFromApi = async () => {
         <span>${name}</span>
         <sup>${sys.country}</sup>
     </h2>
-      <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+      <div class="city-temp">${Math.round(main.temp)}<sup>${degree}</sup></div>
     <figure>
       <img class="city-icon" src="${iconUrlAWS}">
       <figcaption>${weather[0].description}</figcaption>
@@ -95,6 +98,14 @@ const getWeatherDataFromApi = async () => {
       if (e.target.tagName == "IMG") {
         //*tagnme büyük harf gelir.
         e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
+      } else if (e.target.classList.contains("city-temp")) {
+        units == "metric" ? (units = "imperial") : (units = "metric");
+        degree == "°C" ? (degree = "°F") : (degree = "°C");
+        console.log(units);
+        console.log(degree);
+        // e.target.innerHTML = `
+        //   <div class="city-temp">${units}<sup>${degree}</sup></div>
+        //   `;
       }
     });
 
@@ -124,6 +135,32 @@ const getWeatherDataFromApi = async () => {
   }
   form.reset(); // inputu temizlemek için
 };
+
+document.querySelector(".options").addEventListener("click", (e) => {
+  if (e.target.parentElement.classList.contains("languages")) {
+    lang = e.target.value;
+    // } else if (e.target.value == "en") {
+    //   lang = e.target.value;
+    // } else if (e.target.value == "fr") {
+    //   lang = e.target.value;
+  } else if (e.target.parentElement.classList.contains("switch")) {
+    units = e.target.value;
+    degree = e.target.nextElementSibling.id;
+  }
+  // if (e.target.value == "tr") {
+  //   lang = e.target.value;
+  // } else if (e.target.value == "en"){
+  //   lang = e.target.value;
+  // } else if (e.target.value == "fr"){
+  //   lang = e.target.value;
+  // } else if(e.target.value == "metric"){
+  //   units = e.target.value;
+  //   degree = e.target.nextElementSibling.innerText
+  // } else if(e.target.value == "imperial"){
+  //   units = e.target.value;
+  //   degree = e.target.nextElementSibling.innerText
+  // }
+});
 
 //window onload
 document.querySelector(".cities").addEventListener("click", (e) => {

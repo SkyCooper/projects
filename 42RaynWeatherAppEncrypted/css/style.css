@@ -28,7 +28,7 @@ button {
 }
  
 input {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 }
  
 button,
@@ -56,18 +56,14 @@ body {
   padding: 70px;
 }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+
 
 
 /* SECTION #1
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .top-banner {
   color: var(--text_light);
+
 }
 
 .heading {
@@ -80,7 +76,8 @@ body {
 .top-banner form {
   position: relative;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .top-banner form input {
@@ -115,6 +112,23 @@ body {
   left: 0;
   max-width: 450px;
   min-height: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.choices{
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  font-size: 2rem;
 }
 
 
