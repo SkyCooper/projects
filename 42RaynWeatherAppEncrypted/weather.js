@@ -77,7 +77,7 @@ const getWeatherDataFromApi = async () => {
     </h2>
       <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
     <figure>
-      <img class="city-icon" src="${iconUrlAWS}"> //* veya ${iconUrl}
+      <img class="city-icon" src="${iconUrlAWS}">
       <figcaption>${weather[0].description}</figcaption>
     </figure>
   `;
