@@ -4,29 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Digital Clock</title>
 </head>
 
 <body>
+  
+  <!-- <div class="quote text">
+    <h1 class="en"> Time is free, but it’s priceless. You can’t own it, but you can use it. You can’t keep it, but you
+      can spend it. Once
+      you’ve lost it you can never get it back. <br> <br>
+      – Harvey Mackay –</h1>
+    <br>
+    <p class="tr">Zaman ücretsizdir, ama paha biçilemez. Sahip olamazsın, ama onu kullanabilirsin. Onu tutamazsın, ama
+      harcayabilirsin.
+      Bir kez kaybettiğinde asla geri alamazsın.</p>
+  </div> -->
 
-  <div class="container">
+  <div class="digitalClock">
     <h1 class="text clock"></h1>
     <p class="text date"></p>
     <span class="text day"></span>
   </div>
 
-  <div class="quote text">
-    <h1 class="en"> Time is free, but it’s priceless. You can’t own it, but you can use it. You can’t keep it, but you can spend it. Once
-    you’ve lost it you can never get it back. <br> <br>
-    – Harvey Mackay –</h1>
-    <br>
-    <p class="tr">Zaman ücretsizdir, ama paha biçilemez. Sahip olamazsın, ama onu kullanabilirsin. Onu tutamazsın, ama harcayabilirsin.
-    Bir kez kaybettiğinde asla geri alamazsın.</p>
+  
+  <div class="wrapperAnalog">
+    <div class="analogClock">
+      <div class="secs"></div>
+      <div class="mins"></div>
+      <div class="hours"></div>
+      <div class="dot"></div>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="wrapperStopwatch">
+    <p><span id="seconds">00</span>&nbsp;:&nbsp;<span id="tens">00</span></p>
+    <button id="button-start">Start</button>
+    <button id="button-stop">Stop</button>
+    <button id="button-reset">Reset</button>
+  </div>
+
+  <script src="digitalClock.js"></script>
+  <script src="stopwatch.js"></script>
+  <script src="analogClock.js"></script>
 </body>
 
 </html>

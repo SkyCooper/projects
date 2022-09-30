@@ -1,4 +1,4 @@
-const container = document.querySelector(".container");
+const container = document.querySelector(".digitalClock");
 const clock = container.querySelector("h1");
 const today = container.querySelector("p");
 const displayDay = document.querySelector("span");
