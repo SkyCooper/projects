@@ -139,32 +139,16 @@ const getWeatherDataFromApi = async () => {
 document.querySelector(".options").addEventListener("click", (e) => {
   if (e.target.parentElement.classList.contains("languages")) {
     lang = e.target.value;
-    // } else if (e.target.value == "en") {
-    //   lang = e.target.value;
-    // } else if (e.target.value == "fr") {
-    //   lang = e.target.value;
   } else if (e.target.parentElement.classList.contains("switch")) {
     units = e.target.value;
     degree = e.target.nextElementSibling.id;
   }
-  // if (e.target.value == "tr") {
-  //   lang = e.target.value;
-  // } else if (e.target.value == "en"){
-  //   lang = e.target.value;
-  // } else if (e.target.value == "fr"){
-  //   lang = e.target.value;
-  // } else if(e.target.value == "metric"){
-  //   units = e.target.value;
-  //   degree = e.target.nextElementSibling.innerText
-  // } else if(e.target.value == "imperial"){
-  //   units = e.target.value;
-  //   degree = e.target.nextElementSibling.innerText
-  // }
+
 });
 
 //window onload
-document.querySelector(".cities").addEventListener("click", (e) => {
-  if (e.target.tagName == "IMG") {
-    alert("img is clicked!!!");
-  }
-});
+// document.querySelector(".cities").addEventListener("click", (e) => {
+//   if (e.target.tagName == "IMG") {
+//     alert("img is clicked!!!");
+//   }
+// });

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&display=swap');
 
 :root {
   --change-color: rgb(76, 217, 105), rgb(52, 170, 220), rgb(88, 86, 217),
@@ -45,7 +46,9 @@ body {
   /* opacity: 0.5; */
   border-radius: 20px;
   font-weight: 600;
-  font-family: "Orbitron", sans-serif;
+  /* font-family: "Orbitron", monospace; */
+  font-family: 'IBM Plex Mono', monospace;
+
   letter-spacing: 5px;
   color: white;
 }
@@ -125,6 +128,7 @@ button:hover {
   transition: ease 0.4s;
   border-radius: 50%;
 }
+
 .analogClock {
   position: relative;
   width: 20rem;
@@ -137,23 +141,27 @@ button:hover {
   background-size: 88%;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.544);
 }
-.clock:hover {
+
+.analogClock:hover {
   transform: scale(1.1);
 }
+
 .secs {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 52%;
   height: 7rem;
   width: 0.1rem;
   background-color: tomato;
   transform: translateX(-50%);
   transform-origin: 25% 0;
+  z-index: 1;
 }
+
 .mins {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 52%;
   height: 6rem;
   width: 0.3rem;
   border-radius: 20px;
@@ -161,10 +169,11 @@ button:hover {
   transform: translateX(-50%);
   transform-origin: 25% 0;
 }
+
 .hours {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 51%;
   height: 3rem;
   width: 0.5rem;
   background-color: black;
@@ -172,6 +181,7 @@ button:hover {
   transform: translateX(-50%);
   transform-origin: 25% 0;
 }
+
 .dot {
   position: absolute;
   top: 48%;
