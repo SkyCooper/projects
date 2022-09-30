@@ -44,7 +44,6 @@ const digitalClock = setInterval(() => {
     second = `0${second}`;
   }
 
-  // clock.innerText = `${hour} : ${minute} : ${second} ${amPm} `;
   clock.innerHTML = `${hour} : ${minute} : ${second} <sup>${amPm}</sup>`;
   today.innerHTML = `0${day} | 0${mounth} | ${year}`;
   displayDay.innerHTML = `${daysArray[day]}`;

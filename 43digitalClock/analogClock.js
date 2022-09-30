@@ -7,7 +7,7 @@ const hours = document.querySelector(".hours");
 function tiktak() {
 let second = new Date().getSeconds();
 let minute = new Date().getMinutes();
-let hour = new Date().getHours();
+let hour = new Date().getHours()+1;
 console.log(second, minute, hour);
 
 sec.style.transform = `rotate(${180 + (second * 6)}deg)`    // 180 diyerek 12 ye getirdik yelkovanı.Her sn 6 derece dönecek
