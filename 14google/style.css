@@ -82,7 +82,7 @@ ul li a:hover {
   font-size: 14px;
   margin-top: 2px;
   border: none;
-  /* outline: none; */
+  outline: none;
 }
 
 .main__search-bar--magnifier {
